@@ -1,0 +1,228 @@
+﻿<!DOCTYPE html><html lang='en-US'>
+<head>
+<script src='../../../Code2Docu/katex/katex.min.js'></script>
+<script src='../../../Code2Docu/katex/katexStartUp.js'></script>
+<link rel='stylesheet' href='../../../Code2Docu/katex/katex.min.css' />
+<!--[if lt IE 9]><script src='../../../Code2Docu/katex/html5shiv-printshiv-3.7.3.min.js'></script><![endif]-->
+<link rel='stylesheet' href='../../../Code2Docu/highlightJS/scl.css'>
+<script src='../../../Code2Docu/highlightJS/highlight.min.js'></script>
+<script src='../../../Code2Docu/highlightJS/scl.js'></script>
+<script src='../../../Code2Docu/Code2DocuScript.js'></script>
+<script src='../../../Code2Docu/highlightJS/highlight.load.js'></script>
+<link rel='stylesheet' href='../../../Code2Docu/style.css'>
+<link rel='stylesheet' href='../../../Code2Docu/styleCustomized.css'>
+<meta http-equiv='Content-type' content='text/html;charset=UTF-8'>
+<title>fbIO_AnalogOutput (FB / 3.0.1)</title>
+</head>
+<body>
+ <div class="containerFluid"> 
+ <h1>fbIO_AnalogOutput (FB / 3.0.1)</h1>
+<div class='langSelectionBox'>
+<a href='../../en-US/Folders/Program blocks.htm' target='_self'>Overview</a> 
+</div></div><hr>
+<h2>Interface description</h2>
+<h3>Block interface</h3>
+<table class='block'><thead><tr><th colspan='2'> </th><th colspan='5'>fbIO_AnalogOutput (FB)</th><th colspan='2'> </th></tr></thead><tbody>
+<tr class='in out'><td rowspan='2'>Int</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>iInMode</td><td rowspan='2'>&nbsp;</td><td rowspan='2'>wOutValue</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>Word</td></tr>
+<tr class='in out interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in out'><td rowspan='2'>Int</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>iInSensorType</td><td rowspan='2'>&nbsp;</td><td rowspan='2'>bOutAuto</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>Bool</td></tr>
+<tr class='in out interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in out'><td rowspan='2'>Int</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>iInEstopFunction</td><td rowspan='2'>&nbsp;</td><td rowspan='2'>bOutError</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>Bool</td></tr>
+<tr class='in out interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in out'><td rowspan='2'>Bool</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>bInEstop</td><td rowspan='2'>&nbsp;</td><td rowspan='2'>ERROR_IO_AnalogOutput</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>udtError_AnalogOutput</td></tr>
+<tr class='in out interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in'><td rowspan='2'>Bool</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>bInEnable</td><td rowspan='2'>&nbsp;</td><td rowspan='2'></td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'></td></tr>
+<tr class='in interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in'><td rowspan='2'>Real</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>rInValue</td><td rowspan='2'>&nbsp;</td><td rowspan='2'></td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'></td></tr>
+<tr class='in interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in'><td rowspan='2'>Real</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>rInEngUnitsMin</td><td rowspan='2'>&nbsp;</td><td rowspan='2'></td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'></td></tr>
+<tr class='in interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in'><td rowspan='2'>Real</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>rInEngUnitsMax</td><td rowspan='2'>&nbsp;</td><td rowspan='2'></td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'></td></tr>
+<tr class='in interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in'><td rowspan='2'>Bool</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>bInResetError</td><td rowspan='2'>&nbsp;</td><td rowspan='2'></td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'></td></tr>
+<tr class='in interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='inOut'><td rowspan='2'>udtHMI_AnalogOutput</td><td>&nbsp;</td><td>&nbsp;</td><td colspan='3'>HMI_IO_AnalogOutput</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>udtHMI_AnalogOutput</td></tr>
+<tr class='inOut interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+</tbody><tfoot><tr><td colspan='2'>&nbsp;</td><td colspan='5'>&nbsp;</td><td colspan='2'>&nbsp;</td></tr></tfoot></table>
+<h3>Input parameter</h3>
+<table class='BlockInterface'><thead><tr><th class='name'>Identifier</th><th class='type'>Data type</th>
+<th class='default'>Default value</th>
+<th>Description</th></tr></thead><tbody>
+<tr><td>iInMode</td><td>Int</td>
+<td>0</td>
+<td>Current mode</td></tr>
+<tr><td>iInSensorType</td><td>Int</td>
+<td>0</td>
+<td>Enum of sensor types (IoScaling.S7Analog.Types)</td></tr>
+<tr><td>iInEstopFunction</td><td>Int</td>
+<td>0</td>
+<td>Enum of E-Stop repsonse (Estop.xxx)</td></tr>
+<tr><td>bInEstop</td><td>Bool</td>
+<td>FALSE</td>
+<td>System e-stop exists</td></tr>
+<tr><td>bInEnable</td><td>Bool</td>
+<td>FALSE</td>
+<td>Enables the analog output</td></tr>
+<tr><td>rInValue</td><td>Real</td>
+<td>0.0</td>
+<td>Auto mode value of output</td></tr>
+<tr><td>rInEngUnitsMin</td><td>Real</td>
+<td>0.0</td>
+<td>Engineering units scale min</td></tr>
+<tr><td>rInEngUnitsMax</td><td>Real</td>
+<td>0.0</td>
+<td>Engineering units scale max</td></tr>
+<tr><td>bInResetError</td><td>Bool</td>
+<td>FALSE</td>
+<td>Reset block errors</td></tr>
+</tbody></table>
+<h3>Output parameter</h3>
+<table class='BlockInterface'><thead><tr><th class='name'>Identifier</th><th class='type'>Data type</th>
+<th>Description</th></tr></thead><tbody>
+<tr><td>wOutValue</td><td>Word</td>
+<td>Actual analog output value</td></tr>
+<tr><td>bOutAuto</td><td>Bool</td>
+<td>Block in auto mode</td></tr>
+<tr><td>bOutError</td><td>Bool</td>
+<td>Error exists</td></tr>
+<tr><td>ERROR_IO_AnalogOutput</td><td>udtError_AnalogOutput</td>
+<td>Error structure for an analog output</td></tr>
+</tbody></table>
+<h3>In/Out parameter</h3>
+<table class='BlockInterface'><thead><tr><th class='name'>Identifier</th><th class='type'>Data type</th>
+<th>Description</th></tr></thead><tbody>
+<tr><td>HMI_IO_AnalogOutput</td><td>udtHMI_AnalogOutput</td>
+<td>HMI control strucure for an analog output</td></tr>
+</tbody></table>
+<h2>User defined datatype(s)</h2>
+<h3>udtError_AnalogOutput (UDT / V3.0.0)</h3>
+<table class='UDT'>
+  <thead>
+    <tr>
+      <th colspan='1' class='name'>Identifier</th>
+      <th class='type'>Data type</th>
+      <th class='default'>Default value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>OutOfRange</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Input value is outside range of engineering units</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>ConfigurationError</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Engineering units are not properly configured</td>
+  </tr>
+  </tbody>
+</table>
+<h3>udtHMI_AnalogOutput (UDT / V3.0.0)</h3>
+<table class='UDT'>
+  <thead>
+    <tr>
+      <th colspan='1' class='name'>Identifier</th>
+      <th class='type'>Data type</th>
+      <th class='default'>Default value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>iMode</td>
+    <td class='type'>Int</td>
+    <td class='default'>0</td>
+    <td>Current mode</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>iErrorCode</td>
+    <td class='type'>Int</td>
+    <td class='default'>0</td>
+    <td>Error code</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>rValue</td>
+    <td class='type'>Real</td>
+    <td class='default'>0.0</td>
+    <td>Output Value</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>rAutoValue</td>
+    <td class='type'>Real</td>
+    <td class='default'>0.0</td>
+    <td>Auto mode value</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>rManualValue</td>
+    <td class='type'>Real</td>
+    <td class='default'>0.0</td>
+    <td>Manual mode value</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>rEstopValue</td>
+    <td class='type'>Real</td>
+    <td class='default'>0.0</td>
+    <td>Estop condition custom value</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>bPB_ResetError</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>PB Reset block errors</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>bPBEN_ResetError</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>PB Reset error enabled</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>bError</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Overall error</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>bInterlock</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Analog output is interlocked</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>iEstopFunction</td>
+    <td class='type'>Int</td>
+    <td class='default'>0</td>
+    <td>Enum of E-Stop repsonse (Estop.xxx)</td>
+  </tr>
+  </tbody>
+</table>
+<h2>Referenced Objects</h2>
+<table class='ReferencedObjects'>
+	<thead>
+		<tr>
+			<th>Data Types</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>				udtError_AnalogOutput (UDT / V3.0.0)			</td>
+		</tr>
+		<tr>
+			<td>				udtHMI_AnalogOutput (UDT / V3.0.0)			</td>
+		</tr>
+	</tbody>
+</table>
+<hr>
+<p class='footer'>
+LAGER_Daniel_vdB_2026<br>
+<span>Date: 05/2026</span>
+<span>Version: V1.0.0</span>
+<span>Generated with TIA Portal Add-In
+<a href='https://support.industry.siemens.com/cs/ww/en/view/109809007' target='_blank'>Code2Docu</a>
+</span>
+<span> </span>
+</p>
+</body></html>

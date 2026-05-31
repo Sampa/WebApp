@@ -1,0 +1,240 @@
+﻿<!DOCTYPE html><html lang='en-US'>
+<head>
+<meta name='Code2Docu:type'        content='RootDocument' />
+<meta name='Code2Docu:title'       content='LAGER_Daniel_vdB_2026' />
+<meta name='Code2Docu:url'         content='' />
+<script src='../../../Code2Docu/katex/katex.min.js'></script>
+<script src='../../../Code2Docu/katex/katexStartUp.js'></script>
+<link rel='stylesheet' href='../../../Code2Docu/katex/katex.min.css' />
+<!--[if lt IE 9]><script src='../../../Code2Docu/katex/html5shiv-printshiv-3.7.3.min.js'></script><![endif]-->
+<link rel='stylesheet' href='../../../Code2Docu/highlightJS/scl.css'>
+<script src='../../../Code2Docu/highlightJS/highlight.min.js'></script>
+<script src='../../../Code2Docu/highlightJS/scl.js'></script>
+<script src='../../../Code2Docu/Code2DocuScript.js'></script>
+<script src='../../../Code2Docu/highlightJS/highlight.load.js'></script>
+<link rel='stylesheet' href='../../../Code2Docu/style.css'>
+<link rel='stylesheet' href='../../../Code2Docu/styleCustomized.css'>
+<meta http-equiv='Content-type' content='text/html;charset=UTF-8'>
+<title>LAGER_Daniel_vdB_2026</title>
+</head><body>
+ <div class="containerFluid"> 
+ <h1>LAGER_Daniel_vdB_2026</h1>
+<div class='langSelectionBox'>
+<a href='../../en-US/Folders/Program blocks.htm' target='_self'>Overview</a> 
+</div></div><hr>
+<h1 id="system-architecture">System Architecture</h1>
+<p>This is the main documentation for the automated warehouse.</p>
+
+<h1>Program blocks</h1>
+<ul><li class="ProgramFolder">Program blocks<ul>
+<li class="OB"><a href="../Organization%20Blocks/Main.htm" title="Main (OB)" target="_parent">Main (OB)</a></li>
+<li class="FB"><a href="../Function%20Blocks/ModeReset.htm" title="ModeReset (FB)" target="_parent">ModeReset (FB)</a></li>
+<li class="FB"><a href="../Function%20Blocks/OrderManager.htm" title="OrderManager (FB)" target="_parent">OrderManager (FB)</a></li>
+<li class="FB"><a href="../Function%20Blocks/ScadaCalibration.htm" title="ScadaCalibration (FB)" target="_parent">ScadaCalibration (FB)</a></li>
+<li class="folder"><a href="Datablocks.htm" title="Datablocks" target="_parent">Datablocks</a><ul>
+<li class="folder"><a href="Global DB.htm" title="Global DB" target="_parent">Global DB</a><ul>
+</ul></li>
+</ul></li>
+<li class="folder"><a href="Functions.htm" title="Functions" target="_parent">Functions</a><ul>
+<li class="FC"><a href="../Functions/CraneAtTarget.htm" title="CraneAtTarget (FC)" target="_parent">CraneAtTarget (FC)</a></li>
+<li class="FC"><a href="../Functions/FindRackSpot.htm" title="FindRackSpot (FC)" target="_parent">FindRackSpot (FC)</a></li>
+<li class="FC"><a href="../Functions/GetCranePosition.htm" title="GetCranePosition (FC)" target="_parent">GetCranePosition (FC)</a></li>
+<li class="FC"><a href="../Library%20Types/LGF_IsValueInTolerance.htm" title="LGF_IsValueInTolerance (FC / 3.0.2)" target="_parent">LGF_IsValueInTolerance (FC / 3.0.2)</a></li>
+<li class="FC"><a href="../Functions/ReconcileInventory.htm" title="ReconcileInventory (FC)" target="_parent">ReconcileInventory (FC)</a></li>
+<li class="FC"><a href="../Functions/SetAnalogValues.htm" title="SetAnalogValues (FC)" target="_parent">SetAnalogValues (FC)</a></li>
+<li class="FC"><a href="../Functions/SetCranePosition.htm" title="SetCranePosition (FC)" target="_parent">SetCranePosition (FC)</a></li>
+<li class="FC"><a href="../Functions/UpdateRackInfo.htm" title="UpdateRackInfo (FC)" target="_parent">UpdateRackInfo (FC)</a></li>
+<li class="FB"><a href="../Function%20Blocks/ForkManager.htm" title="ForkManager (FB)" target="_parent">ForkManager (FB)</a></li>
+<li class="FB"><a href="../Function%20Blocks/SetDefaultRackSpotValues.htm" title="SetDefaultRackSpotValues (FB)" target="_parent">SetDefaultRackSpotValues (FB)</a></li>
+</ul></li>
+<li class="folder"><a href="InputOutput.htm" title="InputOutput" target="_parent">InputOutput</a><ul>
+<li class="FB"><a href="../Function%20Blocks/Inputs.htm" title="Inputs (FB)" target="_parent">Inputs (FB)</a></li>
+<li class="FB"><a href="../Function%20Blocks/Outputs.htm" title="Outputs (FB)" target="_parent">Outputs (FB)</a></li>
+</ul></li>
+<li class="folder"><a href="Libraries.htm" title="Libraries" target="_parent">Libraries</a><ul>
+<li class="folder"><a href="Conveyors.htm" title="Conveyors" target="_parent">Conveyors</a><ul>
+<li class="FB"><a href="../Function%20Blocks/ConveyorDrv.htm" title="ConveyorDrv (FB)" target="_parent">ConveyorDrv (FB)</a></li>
+</ul></li>
+<li class="folder"><a href="Open Library V19.htm" title="Open Library V19" target="_parent">Open Library V19</a><ul>
+<li class="folder"><a href="Devices.htm" title="Devices" target="_parent">Devices</a><ul>
+<li class="FB"><a href="../Library%20Types/fbIO_AnalogInput.htm" title="fbIO_AnalogInput (FB / 3.0.2)" target="_parent">fbIO_AnalogInput (FB / 3.0.2)</a></li>
+<li class="FB"><a href="../Library%20Types/fbIO_AnalogOutput.htm" title="fbIO_AnalogOutput (FB / 3.0.1)" target="_parent">fbIO_AnalogOutput (FB / 3.0.1)</a></li>
+</ul></li>
+<li class="folder"><a href="Resources.htm" title="Resources" target="_parent">Resources</a><ul>
+<li class="folder"><a href="Conversion.htm" title="Conversion" target="_parent">Conversion</a><ul>
+<li class="FC"><a href="../Library%20Types/fcSwapBytes.htm" title="fcSwapBytes (FC / 3.0.1)" target="_parent">fcSwapBytes (FC / 3.0.1)</a></li>
+</ul></li>
+<li class="folder"><a href="HMI.htm" title="HMI" target="_parent">HMI</a><ul>
+<li class="FC"><a href="../Library%20Types/fcHMIBitEnable.htm" title="fcHMIBitEnable (FC / 3.0.1)" target="_parent">fcHMIBitEnable (FC / 3.0.1)</a></li>
+<li class="FC"><a href="../Library%20Types/fcSetHMIStatusGeneric.htm" title="fcSetHMIStatusGeneric (FC / 3.0.1)" target="_parent">fcSetHMIStatusGeneric (FC / 3.0.1)</a></li>
+<li class="FB"><a href="../Library%20Types/fbErrorScroller.htm" title="fbErrorScroller (FB / 3.0.0)" target="_parent">fbErrorScroller (FB / 3.0.0)</a></li>
+</ul></li>
+<li class="folder"><a href="IO.htm" title="IO" target="_parent">IO</a><ul>
+<li class="FC"><a href="../Library%20Types/fcReadInput.htm" title="fcReadInput (FC / 3.0.1)" target="_parent">fcReadInput (FC / 3.0.1)</a></li>
+<li class="FC"><a href="../Library%20Types/fcWriteOutput.htm" title="fcWriteOutput (FC / 3.0.1)" target="_parent">fcWriteOutput (FC / 3.0.1)</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li class="folder"><a href="StateControl.htm" title="StateControl" target="_parent">StateControl</a><ul>
+<li class="FC"><a href="../Functions/WrapperStateAndModes.htm" title="WrapperStateAndModes (FC)" target="_parent">WrapperStateAndModes (FC)</a></li>
+<li class="FB"><a href="../Function%20Blocks/StateControl.htm" title="StateControl (FB)" target="_parent">StateControl (FB)</a></li>
+<li class="folder"><a href="Modes.htm" title="Modes" target="_parent">Modes</a><ul>
+<li class="folder"><a href="Auto.htm" title="Auto" target="_parent">Auto</a><ul>
+<li class="FB"><a href="../Function%20Blocks/FeedInPallet.htm" title="FeedInPallet (FB)" target="_parent">FeedInPallet (FB)</a></li>
+<li class="FB"><a href="../Function%20Blocks/LoadSequence.htm" title="LoadSequence (FB)" target="_parent">LoadSequence (FB)</a></li>
+<li class="FB"><a href="../Function%20Blocks/ModeAuto.htm" title="ModeAuto (FB)" target="_parent">ModeAuto (FB)</a></li>
+<li class="FB"><a href="../Function%20Blocks/UnloadSequence.htm" title="UnloadSequence (FB)" target="_parent">UnloadSequence (FB)</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li></ul>
+<h1>PLC data types</h1>
+<ul><li class="UDTs">PLC data types<ul>
+<li class="UDT"><a href="../PLC%20data%20types/typeAnalog.htm" title="typeAnalog (UDT)" target="_parent">typeAnalog (UDT)</a></li>
+<li class="UDT"><a href="../Library%20Types/typeCommandsFromScada.htm" title="typeCommandsFromScada (UDT / V0.0.2)" target="_parent">typeCommandsFromScada (UDT / V0.0.2)</a></li>
+<li class="UDT"><a href="../PLC%20data%20types/typeConveyor.htm" title="typeConveyor (UDT)" target="_parent">typeConveyor (UDT)</a></li>
+<li class="UDT"><a href="../PLC%20data%20types/typeConveyors.htm" title="typeConveyors (UDT)" target="_parent">typeConveyors (UDT)</a></li>
+<li class="UDT"><a href="../Library%20Types/typeConveyorScale.htm" title="typeConveyorScale (UDT / V0.0.1)" target="_parent">typeConveyorScale (UDT / V0.0.1)</a></li>
+<li class="UDT"><a href="../PLC%20data%20types/typeCrane.htm" title="typeCrane (UDT)" target="_parent">typeCrane (UDT)</a></li>
+<li class="UDT"><a href="../PLC%20data%20types/typeLogData.htm" title="typeLogData (UDT)" target="_parent">typeLogData (UDT)</a></li>
+<li class="UDT"><a href="../PLC%20data%20types/typeMachineState.htm" title="typeMachineState (UDT)" target="_parent">typeMachineState (UDT)</a></li>
+<li class="UDT"><a href="../PLC%20data%20types/typeMainInput.htm" title="typeMainInput (UDT)" target="_parent">typeMainInput (UDT)</a></li>
+<li class="UDT"><a href="../PLC%20data%20types/typeMainOutput.htm" title="typeMainOutput (UDT)" target="_parent">typeMainOutput (UDT)</a></li>
+<li class="UDT"><a href="../PLC%20data%20types/typePosition.htm" title="typePosition (UDT)" target="_parent">typePosition (UDT)</a></li>
+<li class="UDT"><a href="../Library%20Types/typeScada.htm" title="typeScada (UDT / V0.0.2)" target="_parent">typeScada (UDT / V0.0.2)</a></li>
+<li class="UDT"><a href="../Library%20Types/typeScadaCaliBration.htm" title="typeScadaCaliBration (UDT / V0.0.2)" target="_parent">typeScadaCaliBration (UDT / V0.0.2)</a></li>
+<li class="UDT"><a href="../PLC%20data%20types/typeShelfSpot.htm" title="typeShelfSpot (UDT)" target="_parent">typeShelfSpot (UDT)</a></li>
+<li class="UDT"><a href="../Library%20Types/typeStatusTransferToScada.htm" title="typeStatusTransferToScada (UDT / V0.0.5)" target="_parent">typeStatusTransferToScada (UDT / V0.0.5)</a></li>
+<li class="UDT"><a href="../PLC%20data%20types/typeWarehouseRack.htm" title="typeWarehouseRack (UDT)" target="_parent">typeWarehouseRack (UDT)</a></li>
+<li class="folder"><a href="LBC.htm" title="LBC" target="_parent">LBC</a><ul>
+<li class="UDT"><a href="../Library%20Types/LBC_typeDiagnostics.htm" title="LBC_typeDiagnostics (UDT / V3.0.0)" target="_parent">LBC_typeDiagnostics (UDT / V3.0.0)</a></li>
+<li class="UDT"><a href="../Library%20Types/LBC_typeInterfaceCommands.htm" title="LBC_typeInterfaceCommands (UDT / V3.0.0)" target="_parent">LBC_typeInterfaceCommands (UDT / V3.0.0)</a></li>
+<li class="folder"><a href="AnalogSignals.htm" title="AnalogSignals" target="_parent">AnalogSignals</a><ul>
+<li class="UDT"><a href="../Library%20Types/LBC_typeAnalogProcessValues.htm" title="LBC_typeAnalogProcessValues (UDT / V3.0.0)" target="_parent">LBC_typeAnalogProcessValues (UDT / V3.0.0)</a></li>
+<li class="folder"><a href="Input.htm" title="Input" target="_parent">Input</a><ul>
+<li class="UDT"><a href="../Library%20Types/LBC_typeAnalogInputConfiguration.htm" title="LBC_typeAnalogInputConfiguration (UDT / V3.0.0)" target="_parent">LBC_typeAnalogInputConfiguration (UDT / V3.0.0)</a></li>
+</ul></li>
+<li class="folder"><a href="Output.htm" title="Output" target="_parent">Output</a><ul>
+<li class="UDT"><a href="../Library%20Types/LBC_typeAnalogOutputConfiguration.htm" title="LBC_typeAnalogOutputConfiguration (UDT / V3.0.0)" target="_parent">LBC_typeAnalogOutputConfiguration (UDT / V3.0.0)</a></li>
+<li class="UDT"><a href="../Library%20Types/LBC_typeAnalogOutputControlNode.htm" title="LBC_typeAnalogOutputControlNode (UDT / V3.0.0)" target="_parent">LBC_typeAnalogOutputControlNode (UDT / V3.0.0)</a></li>
+<li class="UDT"><a href="../Library%20Types/LBC_typeAnalogOutputControlNodeCommands.htm" title="LBC_typeAnalogOutputControlNodeCommands (UDT / V3.0.0)" target="_parent">LBC_typeAnalogOutputControlNodeCommands (UDT / V3.0.0)</a></li>
+<li class="UDT"><a href="../Library%20Types/LBC_typeAnalogOutputControlNodeMonitoring.htm" title="LBC_typeAnalogOutputControlNodeMonitoring (UDT / V3.0.0)" target="_parent">LBC_typeAnalogOutputControlNodeMonitoring (UDT / V3.0.0)</a></li>
+<li class="UDT"><a href="../Library%20Types/LBC_typeAnalogOutputInterface.htm" title="LBC_typeAnalogOutputInterface (UDT / V3.0.0)" target="_parent">LBC_typeAnalogOutputInterface (UDT / V3.0.0)</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li class="folder"><a href="Open Library V19.htm" title="Open Library V19" target="_parent">Open Library V19</a><ul>
+<li class="folder"><a href="Data Types.htm" title="Data Types" target="_parent">Data Types</a><ul>
+<li class="folder"><a href="Error.htm" title="Error" target="_parent">Error</a><ul>
+<li class="UDT"><a href="../Library%20Types/udtError_AnalogInput.htm" title="udtError_AnalogInput (UDT / V3.0.0)" target="_parent">udtError_AnalogInput (UDT / V3.0.0)</a></li>
+<li class="UDT"><a href="../Library%20Types/udtError_AnalogOutput.htm" title="udtError_AnalogOutput (UDT / V3.0.0)" target="_parent">udtError_AnalogOutput (UDT / V3.0.0)</a></li>
+</ul></li>
+<li class="folder"><a href="HMI.htm" title="HMI" target="_parent">HMI</a><ul>
+<li class="UDT"><a href="../Library%20Types/udtHMI_AnalogInput.htm" title="udtHMI_AnalogInput (UDT / V3.0.0)" target="_parent">udtHMI_AnalogInput (UDT / V3.0.0)</a></li>
+<li class="UDT"><a href="../Library%20Types/udtHMI_AnalogOutput.htm" title="udtHMI_AnalogOutput (UDT / V3.0.0)" target="_parent">udtHMI_AnalogOutput (UDT / V3.0.0)</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li></ul>
+<h1>PLC tags & constants</h1>
+<ul><li class="TagTables">PLC tags & constants<ul>
+<li class="TagTable"><a href="../PLC%20tag%20tables/Default%20tag%20table.htm" title="Default tag table (Global constants)" target="_parent">Default tag table (Global constants)</a></li>
+<li class="TagTable"><a href="../PLC%20tag%20tables/Inputs.htm" title="Inputs (Global constants)" target="_parent">Inputs (Global constants)</a></li>
+<li class="TagTable"><a href="../PLC%20tag%20tables/MachineConstants.htm" title="MachineConstants (Global constants)" target="_parent">MachineConstants (Global constants)</a></li>
+<li class="TagTable"><a href="../PLC%20tag%20tables/Open%20Library.htm" title="Open Library (Global constants)" target="_parent">Open Library (Global constants)</a></li>
+<li class="TagTable"><a href="../PLC%20tag%20tables/Outputs.htm" title="Outputs (Global constants)" target="_parent">Outputs (Global constants)</a></li>
+</ul></li></ul>
+<h2>Change log</h2>
+<table class='GlobalChangeLog'><thead><tr><th>Version & Date</th><th>Change description</th></tr></thead><tbody>
+<tr><td><b>V1.0.0</b><br/>05/2026</td><td>
+<p><b>NEW:</b></p><ul><li>CraneAtTarget / V1.0.0
+<ul><li>Initial release</li></ul>
+</li>
+<li>FeedInPallet / V1.0.0
+<ul><li>Initial release</li>
+<li>
+*)</li></ul>
+</li>
+<li>FindRackSpot / V1.0.0
+<ul><li>Initial release</li></ul>
+</li>
+<li>ForkManager / V1.0.0
+<ul><li>Initial release</li></ul>
+</li>
+<li>GetCranePosition / V1.0.0
+<ul><li>Initial release</li></ul>
+</li>
+<li>Inputs / V1.0.0
+<ul><li>Initial release</li>
+<li>
+*)</li></ul>
+</li>
+<li>Main / V1.0.0
+<ul><li>Initial release</li>
+<li>
+*)</li></ul>
+</li>
+<li>ModeAuto / V1.0.0
+<ul><li>Initial release</li>
+<li>
+*)</li></ul>
+</li>
+<li>ModeReset / V1.0.0
+<ul><li>Initial release</li></ul>
+</li>
+<li>OrderManager / V1.0.0
+<ul><li>Initial release</li></ul>
+</li>
+<li>Outputs / V1.0.0
+<ul><li>Initial release</li>
+<li>
+*)</li></ul>
+</li>
+<li>ReconcileInventory / V1.0.0
+<ul><li>Initial release</li></ul>
+</li>
+<li>SetCranePosition / V1.0.0
+<ul><li>Initial release</li></ul>
+</li>
+<li>StateControl / V1.0.0
+<ul><li>Initial release</li></ul>
+</li>
+<li>UnloadSequence / V1.0.0
+<ul><li>Initial release</li></ul>
+</li>
+<li>UpdateRackInfo / V1.0.0
+<ul><li>Initial release</li></ul>
+</li></li></ul>
+
+<p><b>UPDATED:</b></p><ul><li>LoadSequence / V1.0.0
+<ul><li>Initial release</li></ul>
+</li></li></ul>
+
+</td></tr>
+<tr><td><b>V-.-.-</b><br/>--/----</td><td>
+<p><b>NEW:</b></p><ul><li>LGF_IsValueInTolerance / V3.0.2
+<ul><li>First released version</li>
+<li>
+Copied from "IsValueInRange"</li><li>Set version to V3.0.0, harmonize the version of the whole library</li><li>Bug fix - negative setpoint verification</li>
+<li>
+Insert documentation</li></ul>
+</li>
+<li>LoadSequence
+</li></li></ul>
+
+
+
+</td></tr>
+</tbody></table>
+<hr>
+<p class='footer'>
+LAGER_Daniel_vdB_2026<br>
+<span>Date: 05/2026</span>
+<span>Version: V1.0.0</span>
+<span>Generated with TIA Portal Add-In
+<a href='https://support.industry.siemens.com/cs/ww/en/view/109809007' target='_blank'>Code2Docu</a>
+</span>
+<span> </span>
+</p>
+</body></html>

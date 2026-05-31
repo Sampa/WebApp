@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html><html lang='en-US'>
+<head>
+<script src='../../../Code2Docu/katex/katex.min.js'></script>
+<script src='../../../Code2Docu/katex/katexStartUp.js'></script>
+<link rel='stylesheet' href='../../../Code2Docu/katex/katex.min.css' />
+<!--[if lt IE 9]><script src='../../../Code2Docu/katex/html5shiv-printshiv-3.7.3.min.js'></script><![endif]-->
+<link rel='stylesheet' href='../../../Code2Docu/highlightJS/scl.css'>
+<script src='../../../Code2Docu/highlightJS/highlight.min.js'></script>
+<script src='../../../Code2Docu/highlightJS/scl.js'></script>
+<script src='../../../Code2Docu/Code2DocuScript.js'></script>
+<script src='../../../Code2Docu/highlightJS/highlight.load.js'></script>
+<link rel='stylesheet' href='../../../Code2Docu/style.css'>
+<link rel='stylesheet' href='../../../Code2Docu/styleCustomized.css'>
+<meta http-equiv='Content-type' content='text/html;charset=UTF-8'>
+<title>ConveyorDrv (FB)</title>
+</head>
+<body>
+ <div class="containerFluid"> 
+ <h1>ConveyorDrv (FB)</h1>
+<div class='langSelectionBox'>
+<a href='../../en-US/Folders/Program blocks.htm' target='_self'>Overview</a> 
+</div></div><hr>
+<h2>Short description</h2>
+<p>Set max speed of the conveyor and scale values from actor</p>
+
+<h2>Interface description</h2>
+<h3>Block interface</h3>
+<table class='block'><thead><tr><th colspan='2'> </th><th colspan='5'>ConveyorDrv (FB)</th><th colspan='2'> </th></tr></thead><tbody>
+<tr class='in out'><td rowspan='2'>Bool</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>Enable</td><td rowspan='2'>&nbsp;</td><td rowspan='2'>Current-Speed</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>Int</td></tr>
+<tr class='in out interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in out'><td rowspan='2'>typeConveyor</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>Data</td><td rowspan='2'>&nbsp;</td><td rowspan='2'>Int-Output</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>Int</td></tr>
+<tr class='in out interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class=' out'><td rowspan='2'></td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'></td><td rowspan='2'>&nbsp;</td><td rowspan='2'>Real-Output</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>Real</td></tr>
+<tr class='out interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='inOut'><td rowspan='2'>typeConveyorScale</td><td>&nbsp;</td><td>&nbsp;</td><td colspan='3'>Calibration</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>typeConveyorScale</td></tr>
+<tr class='inOut interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+</tbody><tfoot><tr><td colspan='2'>&nbsp;</td><td colspan='5'>&nbsp;</td><td colspan='2'>&nbsp;</td></tr></tfoot></table>
+<h3>Input parameter</h3>
+<table class='BlockInterface'><thead><tr><th class='name'>Identifier</th><th class='type'>Data type</th>
+<th class='default'>Default value</th>
+<th>Description</th></tr></thead><tbody>
+<tr><td>Enable</td><td>Bool</td>
+<td>FALSE</td>
+<td>Runs only if true</td></tr>
+<tr><td>Data</td><td>typeConveyor</td>
+<td>---</td>
+<td></td></tr>
+</tbody></table>
+<h3>Output parameter</h3>
+<table class='BlockInterface'><thead><tr><th class='name'>Identifier</th><th class='type'>Data type</th>
+<th>Description</th></tr></thead><tbody>
+<tr><td>Current-Speed</td><td>Int</td>
+<td>In mm/s, If negative dir = Rev</td></tr>
+<tr><td>Int-Output</td><td>Int</td>
+<td>Raw -27648 to +27648 Word (Calibrated)</td></tr>
+<tr><td>Real-Output</td><td>Real</td>
+<td>Raw -10.0 to +10.0 (Calibrated)</td></tr>
+</tbody></table>
+<h3>In/Out parameter</h3>
+<table class='BlockInterface'><thead><tr><th class='name'>Identifier</th><th class='type'>Data type</th>
+<th>Description</th></tr></thead><tbody>
+<tr><td>Calibration</td><td>typeConveyorScale</td>
+<td></td></tr>
+</tbody></table>
+<h2>User defined datatype(s)</h2>
+<h3>typeConveyor (UDT)</h3>
+<table class='UDT'>
+  <thead>
+    <tr>
+      <th colspan='1' class='name'>Identifier</th>
+      <th class='type'>Data type</th>
+      <th class='default'>Default value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>On_OFF</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Enables or disables the conveyor motor.</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>Direction-Rev</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Reverses the conveyor motor direction when true (default is forward).</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>Desired-Speed</td>
+    <td class='type'>Int</td>
+    <td class='default'>0</td>
+    <td>In mm/s (INT)</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>Max-Speed</td>
+    <td class='type'>Int</td>
+    <td class='default'>100</td>
+    <td>Max Speed of the conveyor in mm/s</td>
+  </tr>
+  </tbody>
+</table>
+<h3>typeConveyorScale (UDT / V0.0.1)</h3>
+<table class='UDT'>
+  <thead>
+    <tr>
+      <th colspan='1' class='name'>Identifier</th>
+      <th class='type'>Data type</th>
+      <th class='default'>Default value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>Min_INT-Out</td>
+    <td class='type'>Int</td>
+    <td class='default'>0</td>
+    <td>Min calibrated level for output to Conveyor (INT)</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>Max_INT-Out</td>
+    <td class='type'>Int</td>
+    <td class='default'>27648</td>
+    <td>Max calibrated level for output to Conveyor (INT)</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>Min_REAL-Out</td>
+    <td class='type'>Real</td>
+    <td class='default'>0.0</td>
+    <td>Min calibrated level for output to Conveyor (REAL)</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>Max_REAL-Out</td>
+    <td class='type'>Real</td>
+    <td class='default'>10.0</td>
+    <td>Max calibrated level for output to Conveyor (REAL)</td>
+  </tr>
+  </tbody>
+</table>
+<h2>Referenced Objects</h2>
+<table class='ReferencedObjects'>
+	<thead>
+		<tr>
+			<th>Data Types</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>				typeConveyor (UDT)			</td>
+		</tr>
+		<tr>
+			<td>				typeConveyorScale (UDT / V0.0.1)			</td>
+		</tr>
+	</tbody>
+</table>
+<hr>
+<p class='footer'>
+LAGER_Daniel_vdB_2026<br>
+<span>Date: 05/2026</span>
+<span>Version: V1.0.0</span>
+<span>Generated with TIA Portal Add-In
+<a href='https://support.industry.siemens.com/cs/ww/en/view/109809007' target='_blank'>Code2Docu</a>
+</span>
+<span> </span>
+</p>
+</body></html>

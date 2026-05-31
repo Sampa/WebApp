@@ -1,0 +1,155 @@
+<!DOCTYPE html><html lang='en-US'>
+<head>
+<script src='../../../Code2Docu/katex/katex.min.js'></script>
+<script src='../../../Code2Docu/katex/katexStartUp.js'></script>
+<link rel='stylesheet' href='../../../Code2Docu/katex/katex.min.css' />
+<!--[if lt IE 9]><script src='../../../Code2Docu/katex/html5shiv-printshiv-3.7.3.min.js'></script><![endif]-->
+<link rel='stylesheet' href='../../../Code2Docu/highlightJS/scl.css'>
+<script src='../../../Code2Docu/highlightJS/highlight.min.js'></script>
+<script src='../../../Code2Docu/highlightJS/scl.js'></script>
+<script src='../../../Code2Docu/Code2DocuScript.js'></script>
+<script src='../../../Code2Docu/highlightJS/highlight.load.js'></script>
+<link rel='stylesheet' href='../../../Code2Docu/style.css'>
+<link rel='stylesheet' href='../../../Code2Docu/styleCustomized.css'>
+<meta http-equiv='Content-type' content='text/html;charset=UTF-8'>
+<title>typeMainOutput (UDT)</title>
+</head><body>
+ <div class="containerFluid"> 
+ <h1>typeMainOutput (UDT)</h1>
+<div class='langSelectionBox'>
+<a href='../../en-US/Folders/Program blocks.htm' target='_self'>Overview</a> 
+</div></div><hr>
+<h2>Parameter description</h2>
+<table class='UDT'><thead><tr><th colspan='2' class='name'>Identifier</th><th class='type'>Data type</th><th class='default'>Default value</th><th>Description</th></tr></thead><tbody>
+  <tr>
+    <td colspan ='2' style='width: 125px;'>LampStartGreen</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Output to illuminate the green indicator on the Start button.</td>
+  </tr>
+  <tr>
+    <td colspan ='2' style='width: 125px;'>LampResetBlue</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Output to illuminate the blue indicator on the Reset button.</td>
+  </tr>
+  <tr>
+    <td colspan ='2' style='width: 125px;'>LampStopRed</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Output to illuminate the red indicator on the Stop button.</td>
+  </tr>
+  <tr>
+    <td colspan ='2' style='width: 125px;'>LampUnloadBrown</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Output to illuminate the Unload mode indicator lamp.</td>
+  </tr>
+  <tr>
+    <td colspan ='2' style='width: 125px;'>TowerGreen</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Output to the green light on the signal tower (running/healthy state).</td>
+  </tr>
+  <tr>
+    <td colspan ='2' style='width: 125px;'>TowerYellow</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Output to the yellow light on the signal tower (warning/resetting state).</td>
+  </tr>
+  <tr>
+    <td colspan ='2' style='width: 125px;'>TowerRed</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Output to the red light on the signal tower (error/stopped state).</td>
+  </tr>
+  <tr>
+    <td colspan ='2' style='width: 125px;'>ReqToFeedNewPalletByAuto</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Automatic sequence request to feed a new pallet into the system.</td>
+  </tr>
+  <tr>
+    <td colspan ='2' style='width: 125px;' class='hasChilds'>ReqToRunConveyorByBlock</td>
+    <td class='type'>Struct</td>
+    <td class='default'>---</td>
+    <td>Sequence telling conveyer to run</td>
+  </tr>
+  <tr>
+    <td class='emptyCell'>
+    <td colspan ='1' style='width: 125px;'>ReqEntryOn</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Internal request to run the entry conveyor motor.</td>
+  </tr>
+  <tr>
+    <td class='emptyCell'>
+    <td colspan ='1' style='width: 125px;'>ReqUnloadingOnByReset</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Internal request by MachineState: Auto to run the unload conveyor</td>
+  </tr>
+  <tr>
+    <td class='emptyCell'>
+    <td colspan ='1' style='width: 125px;'>ReqUnloadingOnByAuto</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Internal request by MachineState: Reset to run the unload conveyor</td>
+  </tr>
+  <tr>
+    <td class='emptyCell'>
+    <td colspan ='1' style='width: 125px;'>ReqLoadingOn</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Internal request to run the loading conveyor motor.</td>
+  </tr>
+  <tr>
+    <td class='emptyCell'>
+    <td colspan ='1' style='width: 125px;'>ReqUnloadingOn</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Internal request to run the unloading conveyor motor.</td>
+  </tr>
+  <tr>
+    <td class='emptyCell'>
+    <td colspan ='1' style='width: 125px;'>ReqUnloadingOff</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Internal request to halt the unloading conveyor motor.</td>
+  </tr>
+  <tr>
+    <td colspan ='2' style='width: 125px;'>ReqToFeedNewPalletByJog</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Manual/Jog mode request to feed a new pallet into the system.</td>
+  </tr>
+  <tr>
+    <td colspan ='2' style='width: 125px;'>ReqEmitterByAuto</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Automatic sequence request to trigger the Factory I/O pallet emitter.</td>
+  </tr>
+  <tr>
+    <td colspan ='2' style='width: 125px;'>ReqEmitterOffByReset</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Reset sequence request to turn off the pallet emitter.</td>
+  </tr>
+  <tr>
+    <td colspan ='2' style='width: 125px;'>ReqEmitterByJog</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Manual/Jog mode request to trigger the pallet emitter.</td>
+  </tr>
+</tbody></table>
+<hr>
+<p class='footer'>
+LAGER_Daniel_vdB_2026<br>
+<span>Date: 05/2026</span>
+<span>Version: V1.0.0</span>
+<span>Generated with TIA Portal Add-In
+<a href='https://support.industry.siemens.com/cs/ww/en/view/109809007' target='_blank'>Code2Docu</a>
+</span>
+<span> </span>
+</p>
+</body></html>

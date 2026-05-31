@@ -1,0 +1,450 @@
+﻿<!DOCTYPE html><html lang='en-US'>
+<head>
+<script src='../../../Code2Docu/katex/katex.min.js'></script>
+<script src='../../../Code2Docu/katex/katexStartUp.js'></script>
+<link rel='stylesheet' href='../../../Code2Docu/katex/katex.min.css' />
+<!--[if lt IE 9]><script src='../../../Code2Docu/katex/html5shiv-printshiv-3.7.3.min.js'></script><![endif]-->
+<link rel='stylesheet' href='../../../Code2Docu/highlightJS/scl.css'>
+<script src='../../../Code2Docu/highlightJS/highlight.min.js'></script>
+<script src='../../../Code2Docu/highlightJS/scl.js'></script>
+<script src='../../../Code2Docu/Code2DocuScript.js'></script>
+<script src='../../../Code2Docu/highlightJS/highlight.load.js'></script>
+<link rel='stylesheet' href='../../../Code2Docu/style.css'>
+<link rel='stylesheet' href='../../../Code2Docu/styleCustomized.css'>
+<meta http-equiv='Content-type' content='text/html;charset=UTF-8'>
+<title>CraneAtTarget (FC)</title>
+</head>
+<body>
+ <div class="containerFluid"> 
+ <h1>CraneAtTarget (FC)</h1>
+<div class='langSelectionBox'>
+<a href='../../en-US/Folders/Program blocks.htm' target='_self'>Overview</a> 
+</div></div><hr>
+<h2>Interface description</h2>
+<h3>Block interface</h3>
+<table class='block'><thead><tr><th colspan='2'> </th><th colspan='5'>CraneAtTarget (FC)</th><th colspan='2'> </th></tr></thead><tbody>
+<tr class='in return'><td rowspan='2'>typeCrane</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>ioCrane</td><td rowspan='2'>&nbsp;</td><td rowspan='2'>Ret_Val</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>Bool</td></tr>
+<tr class='in return interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+</tbody><tfoot><tr><td colspan='2'>&nbsp;</td><td colspan='5'>&nbsp;</td><td colspan='2'>&nbsp;</td></tr></tfoot></table>
+<h3>Input parameter</h3>
+<table class='BlockInterface'><thead><tr><th class='name'>Identifier</th><th class='type'>Data type</th>
+<th>Description</th></tr></thead><tbody>
+<tr><td>ioCrane</td><td>typeCrane</td>
+<td></td></tr>
+</tbody></table>
+<h3>Output parameter</h3>
+<table class='BlockInterface'><thead><tr><th class='name'>Identifier</th><th class='type'>Data type</th>
+<th>Description</th></tr></thead><tbody>
+<tr class='return'><td>Ret_Val</td><td>Bool</td>
+<td></td></tr>
+</tbody></table>
+<h2>User defined datatype(s)</h2>
+<h3>typeCrane (UDT)</h3>
+<table class='UDT'>
+  <thead>
+    <tr>
+      <th colspan='1' class='name'>Identifier</th>
+      <th class='type'>Data type</th>
+      <th class='default'>Default value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>LimitsZ</td>
+    <td class='type'>typeAnalog</td>
+    <td class='default'>---</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>LimitsX</td>
+    <td class='type'>typeAnalog</td>
+    <td class='default'>---</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>CurrentPositionRaw</td>
+    <td class='type'>typePosition</td>
+    <td class='default'>---</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>CurrentPositionEng</td>
+    <td class='type'>typePosition</td>
+    <td class='default'>---</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>TargetPositionEng</td>
+    <td class='type'>typePosition</td>
+    <td class='default'>---</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>HmiZInput</td>
+    <td class='type'>udtHMI_AnalogInput</td>
+    <td class='default'>---</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>HmiXInput</td>
+    <td class='type'>udtHMI_AnalogInput</td>
+    <td class='default'>---</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>ErrorZInput</td>
+    <td class='type'>udtError_AnalogInput</td>
+    <td class='default'>---</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>ErrorXInput</td>
+    <td class='type'>udtError_AnalogInput</td>
+    <td class='default'>---</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>HmiZOutput</td>
+    <td class='type'>udtHMI_AnalogOutput</td>
+    <td class='default'>---</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>HmiXOutput</td>
+    <td class='type'>udtHMI_AnalogOutput</td>
+    <td class='default'>---</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>ErrorXOutput</td>
+    <td class='type'>udtError_AnalogOutput</td>
+    <td class='default'>---</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>ErrorZOutput</td>
+    <td class='type'>udtError_AnalogOutput</td>
+    <td class='default'>---</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>ExtendCraneEntrySide</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Command to extend the crane forks toward the entry/load conveyor side.</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>ExtendCraneExitSide</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Command to extend the crane forks toward the exit/unload conveyor side.</td>
+  </tr>
+  </tbody>
+</table>
+<h3>typeAnalog (UDT)</h3>
+<table class='UDT'>
+  <thead>
+    <tr>
+      <th colspan='1' class='name'>Identifier</th>
+      <th class='type'>Data type</th>
+      <th class='default'>Default value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>RawMin</td>
+    <td class='type'>Int</td>
+    <td class='default'>0</td>
+    <td>Measured minimum value of the analog input</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>RawMax</td>
+    <td class='type'>Int</td>
+    <td class='default'>0</td>
+    <td>Measured maximum value of the analog input</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>EngMin</td>
+    <td class='type'>Int</td>
+    <td class='default'>0</td>
+    <td>Minimum Engineering units (calibrated based on Raw values)</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>EngMax</td>
+    <td class='type'>Int</td>
+    <td class='default'>0</td>
+    <td>Maximum Engineering unts (calibrated based on Raw values)</td>
+  </tr>
+  </tbody>
+</table>
+<h3>typePosition (UDT)</h3>
+<table class='UDT'>
+  <thead>
+    <tr>
+      <th colspan='1' class='name'>Identifier</th>
+      <th class='type'>Data type</th>
+      <th class='default'>Default value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>X</td>
+    <td class='type'>Int</td>
+    <td class='default'>0</td>
+    <td>X coordinate (horizontal)</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>Z</td>
+    <td class='type'>Int</td>
+    <td class='default'>0</td>
+    <td>Z coordinate (vertical)</td>
+  </tr>
+  </tbody>
+</table>
+<h3>udtHMI_AnalogInput (UDT / V3.0.0)</h3>
+<table class='UDT'>
+  <thead>
+    <tr>
+      <th colspan='1' class='name'>Identifier</th>
+      <th class='type'>Data type</th>
+      <th class='default'>Default value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>iMode</td>
+    <td class='type'>Int</td>
+    <td class='default'>0</td>
+    <td>Current mode</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>iErrorCode</td>
+    <td class='type'>Int</td>
+    <td class='default'>0</td>
+    <td>Error code</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>iStatus</td>
+    <td class='type'>Int</td>
+    <td class='default'>0</td>
+    <td>Overall HMI Status</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>rActiveValue</td>
+    <td class='type'>Real</td>
+    <td class='default'>0.0</td>
+    <td>Used Value, Input or Override</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>rInputValue</td>
+    <td class='type'>Real</td>
+    <td class='default'>0.0</td>
+    <td>Input Value</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>rManualValue</td>
+    <td class='type'>Real</td>
+    <td class='default'>0.0</td>
+    <td>Manual mode simulated value</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>bPB_ResetError</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>PB Reset block errors</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>bPBEN_ResetError</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>PB Reset error enabled</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>bError</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Overall error</td>
+  </tr>
+  </tbody>
+</table>
+<h3>udtError_AnalogInput (UDT / V3.0.0)</h3>
+<table class='UDT'>
+  <thead>
+    <tr>
+      <th colspan='1' class='name'>Identifier</th>
+      <th class='type'>Data type</th>
+      <th class='default'>Default value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>LowLowAlarm</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Value below low low set point</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>HighHighAlarm</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Value above high high set point</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>Invalid</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Invalid input valid</td>
+  </tr>
+  </tbody>
+</table>
+<h3>udtHMI_AnalogOutput (UDT / V3.0.0)</h3>
+<table class='UDT'>
+  <thead>
+    <tr>
+      <th colspan='1' class='name'>Identifier</th>
+      <th class='type'>Data type</th>
+      <th class='default'>Default value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>iMode</td>
+    <td class='type'>Int</td>
+    <td class='default'>0</td>
+    <td>Current mode</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>iErrorCode</td>
+    <td class='type'>Int</td>
+    <td class='default'>0</td>
+    <td>Error code</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>rValue</td>
+    <td class='type'>Real</td>
+    <td class='default'>0.0</td>
+    <td>Output Value</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>rAutoValue</td>
+    <td class='type'>Real</td>
+    <td class='default'>0.0</td>
+    <td>Auto mode value</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>rManualValue</td>
+    <td class='type'>Real</td>
+    <td class='default'>0.0</td>
+    <td>Manual mode value</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>rEstopValue</td>
+    <td class='type'>Real</td>
+    <td class='default'>0.0</td>
+    <td>Estop condition custom value</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>bPB_ResetError</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>PB Reset block errors</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>bPBEN_ResetError</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>PB Reset error enabled</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>bError</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Overall error</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>bInterlock</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Analog output is interlocked</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>iEstopFunction</td>
+    <td class='type'>Int</td>
+    <td class='default'>0</td>
+    <td>Enum of E-Stop repsonse (Estop.xxx)</td>
+  </tr>
+  </tbody>
+</table>
+<h3>udtError_AnalogOutput (UDT / V3.0.0)</h3>
+<table class='UDT'>
+  <thead>
+    <tr>
+      <th colspan='1' class='name'>Identifier</th>
+      <th class='type'>Data type</th>
+      <th class='default'>Default value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>OutOfRange</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Input value is outside range of engineering units</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>ConfigurationError</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Engineering units are not properly configured</td>
+  </tr>
+  </tbody>
+</table>
+<h2>Functional description</h2>
+<h3 id="description">Description</h3>
+<p>Compares the current X and Z engineering positions of the crane with its target coordinates. Uses the <code>LGF_IsValueInTolerance</code> function to check if the current position is within a 1% tolerance of the setpoint. Returns TRUE if both axes are within tolerance.</p>
+<h3 id="interface-specifications">Interface Specifications</h3>
+<ul>
+<li><strong>ioCrane</strong>: In/Out reference to the crane data structure (<code>typeCrane</code>) containing both current and target positional properties.</li>
+<li><strong>Return Value</strong>: Boolean (Bool) indicating whether the crane is at the target position.</li>
+</ul>
+<h3 id="safety-interlocks">Safety Interlocks</h3>
+<p>None.</p>
+
+<h2>Referenced Objects</h2>
+<table class='ReferencedObjects'>
+	<thead>
+		<tr>
+			<th>Functions</th>
+			<th>Data Types</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>				LGF_IsValueInTolerance (FC / V3.0.2)			</td>
+			<td>				typeCrane (UDT)			</td>
+		</tr>
+	</tbody>
+</table>
+<h2>Change log</h2>
+<table class='ChangeLog'><thead><tr><th colspan='2'>Version & Date</th><th>Change description</th></tr></thead><tbody>
+<tr class='LogEntryStart'><td></td><td>1.0.0</td><td>Daniel vdB</td></tr>
+<tr><td></td><td>30.05.2026</td><td>Initial release</td></tr>
+</tbody></table>
+<hr>
+<p class='footer'>
+LAGER_Daniel_vdB_2026<br>
+<span>Date: 05/2026</span>
+<span>Version: V1.0.0</span>
+<span>Generated with TIA Portal Add-In
+<a href='https://support.industry.siemens.com/cs/ww/en/view/109809007' target='_blank'>Code2Docu</a>
+</span>
+<span> </span>
+</p>
+</body></html>

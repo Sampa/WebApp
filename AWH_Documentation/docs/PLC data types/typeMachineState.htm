@@ -1,0 +1,83 @@
+<!DOCTYPE html><html lang='en-US'>
+<head>
+<script src='../../../Code2Docu/katex/katex.min.js'></script>
+<script src='../../../Code2Docu/katex/katexStartUp.js'></script>
+<link rel='stylesheet' href='../../../Code2Docu/katex/katex.min.css' />
+<!--[if lt IE 9]><script src='../../../Code2Docu/katex/html5shiv-printshiv-3.7.3.min.js'></script><![endif]-->
+<link rel='stylesheet' href='../../../Code2Docu/highlightJS/scl.css'>
+<script src='../../../Code2Docu/highlightJS/highlight.min.js'></script>
+<script src='../../../Code2Docu/highlightJS/scl.js'></script>
+<script src='../../../Code2Docu/Code2DocuScript.js'></script>
+<script src='../../../Code2Docu/highlightJS/highlight.load.js'></script>
+<link rel='stylesheet' href='../../../Code2Docu/style.css'>
+<link rel='stylesheet' href='../../../Code2Docu/styleCustomized.css'>
+<meta http-equiv='Content-type' content='text/html;charset=UTF-8'>
+<title>typeMachineState (UDT)</title>
+</head><body>
+ <div class="containerFluid"> 
+ <h1>typeMachineState (UDT)</h1>
+<div class='langSelectionBox'>
+<a href='../../en-US/Folders/Program blocks.htm' target='_self'>Overview</a> 
+</div></div><hr>
+<h2>Parameter description</h2>
+<table class='UDT'><thead><tr><th colspan='1' class='name'>Identifier</th><th class='type'>Data type</th><th class='default'>Default value</th><th>Description</th></tr></thead><tbody>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>MachineState</td>
+    <td class='type'>Int</td>
+    <td class='default'>0</td>
+    <td>The current State of the machine.</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>ActuatorsAllowed</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Global safety permissive allowing physical outputs and actuators to energize.</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>SystemRunning</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Indicates the machine is actively executing operations in automatic mode.</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>ResetDone</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Flag indicating the system reset sequence is complete and the machine is ready.</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>SequenceIdle</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Indicates no automatic sequences are currently active or running.</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>ResetSequenceComplete</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Confirmation that all individual sub-systems have finished their reset routines.</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>FeedInPalletDone</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Flag indicating a new pallet has been successfully fed into the staging/load position.</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>IdleUnloadingLoading</td>
+    <td class='type'>String</td>
+    <td class='default'>'Idle'</td>
+    <td>Idle/Unloading/Loading</td>
+  </tr>
+</tbody></table>
+<hr>
+<p class='footer'>
+LAGER_Daniel_vdB_2026<br>
+<span>Date: 05/2026</span>
+<span>Version: V1.0.0</span>
+<span>Generated with TIA Portal Add-In
+<a href='https://support.industry.siemens.com/cs/ww/en/view/109809007' target='_blank'>Code2Docu</a>
+</span>
+<span> </span>
+</p>
+</body></html>

@@ -1,0 +1,215 @@
+﻿<!DOCTYPE html><html lang='en-US'>
+<head>
+<script src='../../../Code2Docu/katex/katex.min.js'></script>
+<script src='../../../Code2Docu/katex/katexStartUp.js'></script>
+<link rel='stylesheet' href='../../../Code2Docu/katex/katex.min.css' />
+<!--[if lt IE 9]><script src='../../../Code2Docu/katex/html5shiv-printshiv-3.7.3.min.js'></script><![endif]-->
+<link rel='stylesheet' href='../../../Code2Docu/highlightJS/scl.css'>
+<script src='../../../Code2Docu/highlightJS/highlight.min.js'></script>
+<script src='../../../Code2Docu/highlightJS/scl.js'></script>
+<script src='../../../Code2Docu/Code2DocuScript.js'></script>
+<script src='../../../Code2Docu/highlightJS/highlight.load.js'></script>
+<link rel='stylesheet' href='../../../Code2Docu/style.css'>
+<link rel='stylesheet' href='../../../Code2Docu/styleCustomized.css'>
+<meta http-equiv='Content-type' content='text/html;charset=UTF-8'>
+<title>UpdateRackInfo (FC)</title>
+</head>
+<body>
+ <div class="containerFluid"> 
+ <h1>UpdateRackInfo (FC)</h1>
+<div class='langSelectionBox'>
+<a href='../../en-US/Folders/Program blocks.htm' target='_self'>Overview</a> 
+</div></div><hr>
+<h2>Interface description</h2>
+<h3>Block interface</h3>
+<table class='block'><thead><tr><th colspan='2'> </th><th colspan='5'>UpdateRackInfo (FC)</th><th colspan='2'> </th></tr></thead><tbody>
+<tr class='in return'><td rowspan='2'>Bool</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>isLoading</td><td rowspan='2'>&nbsp;</td><td rowspan='2'>Ret_Val</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>Void</td></tr>
+<tr class='in return interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in'><td rowspan='2'>Int</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>Color</td><td rowspan='2'>&nbsp;</td><td rowspan='2'></td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'></td></tr>
+<tr class='in interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in'><td rowspan='2'>Int</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>IndexX</td><td rowspan='2'>&nbsp;</td><td rowspan='2'></td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'></td></tr>
+<tr class='in interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in'><td rowspan='2'>Int</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>IndexZ</td><td rowspan='2'>&nbsp;</td><td rowspan='2'></td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'></td></tr>
+<tr class='in interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='inOut'><td rowspan='2'>typeWarehouseRack</td><td>&nbsp;</td><td>&nbsp;</td><td colspan='3'>ioRack</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>typeWarehouseRack</td></tr>
+<tr class='inOut interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+</tbody><tfoot><tr><td colspan='2'>&nbsp;</td><td colspan='5'>&nbsp;</td><td colspan='2'>&nbsp;</td></tr></tfoot></table>
+<h3>Input parameter</h3>
+<table class='BlockInterface'><thead><tr><th class='name'>Identifier</th><th class='type'>Data type</th>
+<th>Description</th></tr></thead><tbody>
+<tr><td>isLoading</td><td>Bool</td>
+<td></td></tr>
+<tr><td>Color</td><td>Int</td>
+<td></td></tr>
+<tr><td>IndexX</td><td>Int</td>
+<td></td></tr>
+<tr><td>IndexZ</td><td>Int</td>
+<td></td></tr>
+</tbody></table>
+<h3>Output parameter</h3>
+<table class='BlockInterface'><thead><tr><th class='name'>Identifier</th><th class='type'>Data type</th>
+<th>Description</th></tr></thead><tbody>
+<tr class='return'><td>Ret_Val</td><td>Void</td>
+<td>Void - Function has no return value</td></tr>
+</tbody></table>
+<h3>In/Out parameter</h3>
+<table class='BlockInterface'><thead><tr><th class='name'>Identifier</th><th class='type'>Data type</th>
+<th>Description</th></tr></thead><tbody>
+<tr><td>ioRack</td><td>typeWarehouseRack</td>
+<td></td></tr>
+</tbody></table>
+<h2>User defined datatype(s)</h2>
+<h3>typeWarehouseRack (UDT)</h3>
+<table class='UDT'>
+  <thead>
+    <tr>
+      <th colspan='1' class='name'>Identifier</th>
+      <th class='type'>Data type</th>
+      <th class='default'>Default value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>AllStorageSpots</td>
+    <td class='type'>Array[1..9, 1..6] of typeShelfSpot</td>
+    <td class='default'>---</td>
+    <td>The storage spots of this warehouse racks and their data</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>TotalSpots</td>
+    <td class='type'>Int</td>
+    <td class='default'>54</td>
+    <td>Total amount of storage spots</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>AvailableSpots</td>
+    <td class='type'>Int</td>
+    <td class='default'>54</td>
+    <td>Amount of available/empty storage spots</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>TotalGreenStored</td>
+    <td class='type'>Int</td>
+    <td class='default'>0</td>
+    <td>Totalt amount of starage spots occupied by a green item</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>TotalBlueStored</td>
+    <td class='type'>Int</td>
+    <td class='default'>0</td>
+    <td>Totalt amount of starage spots occupied by a blue item</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>TotalBlackStored</td>
+    <td class='type'>Int</td>
+    <td class='default'>0</td>
+    <td>Totalt amount of starage spots occupied by a black item</td>
+  </tr>
+  </tbody>
+</table>
+<h3>typeShelfSpot (UDT)</h3>
+<table class='UDT'>
+  <thead>
+    <tr>
+      <th colspan='1' class='name'>Identifier</th>
+      <th class='type'>Data type</th>
+      <th class='default'>Default value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>Occupied</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Reserved by crane for action/occupied.. (is this redundant now?)</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>ItemType</td>
+    <td class='type'>Int</td>
+    <td class='default'>0</td>
+    <td>Holds a reference to the type of the stored itm 0=none,1=Blue,4=Green,7=Black</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>Status</td>
+    <td class='type'>Int</td>
+    <td class='default'>0</td>
+    <td>0=Empty, 1= Full, 2=Reservered for action, 3=Faulty/blocked</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>Position</td>
+    <td class='type'>typePosition</td>
+    <td class='default'>---</td>
+    <td></td>
+  </tr>
+  </tbody>
+</table>
+<h3>typePosition (UDT)</h3>
+<table class='UDT'>
+  <thead>
+    <tr>
+      <th colspan='1' class='name'>Identifier</th>
+      <th class='type'>Data type</th>
+      <th class='default'>Default value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>X</td>
+    <td class='type'>Int</td>
+    <td class='default'>0</td>
+    <td>X coordinate (horizontal)</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>Z</td>
+    <td class='type'>Int</td>
+    <td class='default'>0</td>
+    <td>Z coordinate (vertical)</td>
+  </tr>
+  </tbody>
+</table>
+<h2>Functional description</h2>
+<h3 id="description">Description</h3>
+<p>Adjusts the total available spots and the specific stored item counts (Green, Blue, Black) within the <code>ioRack</code> structure depending on whether an item is being loaded or unloaded. It also updates the target storage spot's matrix data (<code>Status</code>, <code>ItemType</code>, and <code>Occupied</code> boolean).</p>
+<h3 id="interface-specifications">Interface Specifications</h3>
+<ul>
+<li><strong>isLoading</strong>: Boolean input. TRUE if loading an item onto the rack, FALSE if unloading.</li>
+<li><strong>Color</strong>: Integer input specifying the item color (1=Green, 3=Blue, 7=Black).</li>
+<li><strong>IndexX</strong>: Integer input for the X-index of the specific storage spot array.</li>
+<li><strong>IndexZ</strong>: Integer input for the Z-index of the specific storage spot array.</li>
+<li><strong>ioRack</strong>: In/Out reference to the warehouse rack data structure (<code>typeWarehouseRack</code>).</li>
+</ul>
+<h3 id="safety-interlocks">Safety Interlocks</h3>
+<p>None.</p>
+
+<h2>Referenced Objects</h2>
+<table class='ReferencedObjects'>
+	<thead>
+		<tr>
+			<th>Data Types</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>				typeWarehouseRack (UDT)			</td>
+		</tr>
+	</tbody>
+</table>
+<h2>Change log</h2>
+<table class='ChangeLog'><thead><tr><th colspan='2'>Version & Date</th><th>Change description</th></tr></thead><tbody>
+<tr class='LogEntryStart'><td></td><td>1.0.0</td><td>Daniel vdB</td></tr>
+<tr><td></td><td>30.05.2026</td><td>Initial release</td></tr>
+</tbody></table>
+<hr>
+<p class='footer'>
+LAGER_Daniel_vdB_2026<br>
+<span>Date: 05/2026</span>
+<span>Version: V1.0.0</span>
+<span>Generated with TIA Portal Add-In
+<a href='https://support.industry.siemens.com/cs/ww/en/view/109809007' target='_blank'>Code2Docu</a>
+</span>
+<span> </span>
+</p>
+</body></html>

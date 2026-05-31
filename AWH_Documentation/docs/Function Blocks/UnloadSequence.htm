@@ -1,0 +1,893 @@
+﻿<!DOCTYPE html><html lang='en-US'>
+<head>
+<script src='../../../Code2Docu/katex/katex.min.js'></script>
+<script src='../../../Code2Docu/katex/katexStartUp.js'></script>
+<link rel='stylesheet' href='../../../Code2Docu/katex/katex.min.css' />
+<!--[if lt IE 9]><script src='../../../Code2Docu/katex/html5shiv-printshiv-3.7.3.min.js'></script><![endif]-->
+<link rel='stylesheet' href='../../../Code2Docu/highlightJS/scl.css'>
+<script src='../../../Code2Docu/highlightJS/highlight.min.js'></script>
+<script src='../../../Code2Docu/highlightJS/scl.js'></script>
+<script src='../../../Code2Docu/Code2DocuScript.js'></script>
+<script src='../../../Code2Docu/highlightJS/highlight.load.js'></script>
+<link rel='stylesheet' href='../../../Code2Docu/style.css'>
+<link rel='stylesheet' href='../../../Code2Docu/styleCustomized.css'>
+<meta http-equiv='Content-type' content='text/html;charset=UTF-8'>
+<title>UnloadSequence (FB)</title>
+</head>
+<body>
+ <div class="containerFluid"> 
+ <h1>UnloadSequence (FB)</h1>
+<div class='langSelectionBox'>
+<a href='../../en-US/Folders/Program blocks.htm' target='_self'>Overview</a> 
+</div></div><hr>
+<h2>Interface description</h2>
+<h3>Block interface</h3>
+<table class='block'><thead><tr><th colspan='2'> </th><th colspan='5'>UnloadSequence (FB)</th><th colspan='2'> </th></tr></thead><tbody>
+<tr class='in out'><td rowspan='2'>Bool</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>xOkayToStartNewCycle</td><td rowspan='2'>&nbsp;</td><td rowspan='2'>xIdle</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>Bool</td></tr>
+<tr class='in out interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in'><td rowspan='2'>Int</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>iForcedUnloadType</td><td rowspan='2'>&nbsp;</td><td rowspan='2'></td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'></td></tr>
+<tr class='in interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='inOut'><td rowspan='2'>typeCrane</td><td>&nbsp;</td><td>&nbsp;</td><td colspan='3'>ioCrane</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>typeCrane</td></tr>
+<tr class='inOut interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='inOut'><td rowspan='2'>typeMachineState</td><td>&nbsp;</td><td>&nbsp;</td><td colspan='3'>ioState</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>typeMachineState</td></tr>
+<tr class='inOut interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='inOut'><td rowspan='2'>typeWarehouseRack</td><td>&nbsp;</td><td>&nbsp;</td><td colspan='3'>ioRack</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>typeWarehouseRack</td></tr>
+<tr class='inOut interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='inOut'><td rowspan='2'>typeMainInput</td><td>&nbsp;</td><td>&nbsp;</td><td colspan='3'>ioInput</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>typeMainInput</td></tr>
+<tr class='inOut interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='inOut'><td rowspan='2'>typeMainOutput</td><td>&nbsp;</td><td>&nbsp;</td><td colspan='3'>ioOutput</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>typeMainOutput</td></tr>
+<tr class='inOut interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+</tbody><tfoot><tr><td colspan='2'>&nbsp;</td><td colspan='5'>&nbsp;</td><td colspan='2'>&nbsp;</td></tr></tfoot></table>
+<h3>Input parameter</h3>
+<table class='BlockInterface'><thead><tr><th class='name'>Identifier</th><th class='type'>Data type</th>
+<th class='default'>Default value</th>
+<th>Description</th></tr></thead><tbody>
+<tr><td>xOkayToStartNewCycle</td><td>Bool</td>
+<td>FALSE</td>
+<td>Unload Mode Selection active from AutoMode block</td></tr>
+<tr><td>iForcedUnloadType</td><td>Int</td>
+<td>0</td>
+<td>0 = Normal Unload, 1-3 = Specific Order Mode Unload</td></tr>
+</tbody></table>
+<h3>Output parameter</h3>
+<table class='BlockInterface'><thead><tr><th class='name'>Identifier</th><th class='type'>Data type</th>
+<th>Description</th></tr></thead><tbody>
+<tr><td>xIdle</td><td>Bool</td>
+<td>Output indicating the sequence is resting at idle state</td></tr>
+</tbody></table>
+<h3>In/Out parameter</h3>
+<table class='BlockInterface'><thead><tr><th class='name'>Identifier</th><th class='type'>Data type</th>
+<th>Description</th></tr></thead><tbody>
+<tr><td>ioCrane</td><td>typeCrane</td>
+<td></td></tr>
+<tr><td>ioState</td><td>typeMachineState</td>
+<td></td></tr>
+<tr><td>ioRack</td><td>typeWarehouseRack</td>
+<td></td></tr>
+<tr><td>ioInput</td><td>typeMainInput</td>
+<td></td></tr>
+<tr><td>ioOutput</td><td>typeMainOutput</td>
+<td>Added to interface to allow SPOW write</td></tr>
+</tbody></table>
+<h2>User defined datatype(s)</h2>
+<h3>typeCrane (UDT)</h3>
+<table class='UDT'>
+  <thead>
+    <tr>
+      <th colspan='1' class='name'>Identifier</th>
+      <th class='type'>Data type</th>
+      <th class='default'>Default value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>LimitsZ</td>
+    <td class='type'>typeAnalog</td>
+    <td class='default'>---</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>LimitsX</td>
+    <td class='type'>typeAnalog</td>
+    <td class='default'>---</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>CurrentPositionRaw</td>
+    <td class='type'>typePosition</td>
+    <td class='default'>---</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>CurrentPositionEng</td>
+    <td class='type'>typePosition</td>
+    <td class='default'>---</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>TargetPositionEng</td>
+    <td class='type'>typePosition</td>
+    <td class='default'>---</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>HmiZInput</td>
+    <td class='type'>udtHMI_AnalogInput</td>
+    <td class='default'>---</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>HmiXInput</td>
+    <td class='type'>udtHMI_AnalogInput</td>
+    <td class='default'>---</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>ErrorZInput</td>
+    <td class='type'>udtError_AnalogInput</td>
+    <td class='default'>---</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>ErrorXInput</td>
+    <td class='type'>udtError_AnalogInput</td>
+    <td class='default'>---</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>HmiZOutput</td>
+    <td class='type'>udtHMI_AnalogOutput</td>
+    <td class='default'>---</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>HmiXOutput</td>
+    <td class='type'>udtHMI_AnalogOutput</td>
+    <td class='default'>---</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>ErrorXOutput</td>
+    <td class='type'>udtError_AnalogOutput</td>
+    <td class='default'>---</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>ErrorZOutput</td>
+    <td class='type'>udtError_AnalogOutput</td>
+    <td class='default'>---</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>ExtendCraneEntrySide</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Command to extend the crane forks toward the entry/load conveyor side.</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>ExtendCraneExitSide</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Command to extend the crane forks toward the exit/unload conveyor side.</td>
+  </tr>
+  </tbody>
+</table>
+<h3>typeAnalog (UDT)</h3>
+<table class='UDT'>
+  <thead>
+    <tr>
+      <th colspan='1' class='name'>Identifier</th>
+      <th class='type'>Data type</th>
+      <th class='default'>Default value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>RawMin</td>
+    <td class='type'>Int</td>
+    <td class='default'>0</td>
+    <td>Measured minimum value of the analog input</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>RawMax</td>
+    <td class='type'>Int</td>
+    <td class='default'>0</td>
+    <td>Measured maximum value of the analog input</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>EngMin</td>
+    <td class='type'>Int</td>
+    <td class='default'>0</td>
+    <td>Minimum Engineering units (calibrated based on Raw values)</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>EngMax</td>
+    <td class='type'>Int</td>
+    <td class='default'>0</td>
+    <td>Maximum Engineering unts (calibrated based on Raw values)</td>
+  </tr>
+  </tbody>
+</table>
+<h3>typePosition (UDT)</h3>
+<table class='UDT'>
+  <thead>
+    <tr>
+      <th colspan='1' class='name'>Identifier</th>
+      <th class='type'>Data type</th>
+      <th class='default'>Default value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>X</td>
+    <td class='type'>Int</td>
+    <td class='default'>0</td>
+    <td>X coordinate (horizontal)</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>Z</td>
+    <td class='type'>Int</td>
+    <td class='default'>0</td>
+    <td>Z coordinate (vertical)</td>
+  </tr>
+  </tbody>
+</table>
+<h3>udtHMI_AnalogInput (UDT / V3.0.0)</h3>
+<table class='UDT'>
+  <thead>
+    <tr>
+      <th colspan='1' class='name'>Identifier</th>
+      <th class='type'>Data type</th>
+      <th class='default'>Default value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>iMode</td>
+    <td class='type'>Int</td>
+    <td class='default'>0</td>
+    <td>Current mode</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>iErrorCode</td>
+    <td class='type'>Int</td>
+    <td class='default'>0</td>
+    <td>Error code</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>iStatus</td>
+    <td class='type'>Int</td>
+    <td class='default'>0</td>
+    <td>Overall HMI Status</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>rActiveValue</td>
+    <td class='type'>Real</td>
+    <td class='default'>0.0</td>
+    <td>Used Value, Input or Override</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>rInputValue</td>
+    <td class='type'>Real</td>
+    <td class='default'>0.0</td>
+    <td>Input Value</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>rManualValue</td>
+    <td class='type'>Real</td>
+    <td class='default'>0.0</td>
+    <td>Manual mode simulated value</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>bPB_ResetError</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>PB Reset block errors</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>bPBEN_ResetError</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>PB Reset error enabled</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>bError</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Overall error</td>
+  </tr>
+  </tbody>
+</table>
+<h3>udtError_AnalogInput (UDT / V3.0.0)</h3>
+<table class='UDT'>
+  <thead>
+    <tr>
+      <th colspan='1' class='name'>Identifier</th>
+      <th class='type'>Data type</th>
+      <th class='default'>Default value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>LowLowAlarm</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Value below low low set point</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>HighHighAlarm</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Value above high high set point</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>Invalid</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Invalid input valid</td>
+  </tr>
+  </tbody>
+</table>
+<h3>udtHMI_AnalogOutput (UDT / V3.0.0)</h3>
+<table class='UDT'>
+  <thead>
+    <tr>
+      <th colspan='1' class='name'>Identifier</th>
+      <th class='type'>Data type</th>
+      <th class='default'>Default value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>iMode</td>
+    <td class='type'>Int</td>
+    <td class='default'>0</td>
+    <td>Current mode</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>iErrorCode</td>
+    <td class='type'>Int</td>
+    <td class='default'>0</td>
+    <td>Error code</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>rValue</td>
+    <td class='type'>Real</td>
+    <td class='default'>0.0</td>
+    <td>Output Value</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>rAutoValue</td>
+    <td class='type'>Real</td>
+    <td class='default'>0.0</td>
+    <td>Auto mode value</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>rManualValue</td>
+    <td class='type'>Real</td>
+    <td class='default'>0.0</td>
+    <td>Manual mode value</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>rEstopValue</td>
+    <td class='type'>Real</td>
+    <td class='default'>0.0</td>
+    <td>Estop condition custom value</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>bPB_ResetError</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>PB Reset block errors</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>bPBEN_ResetError</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>PB Reset error enabled</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>bError</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Overall error</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>bInterlock</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Analog output is interlocked</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>iEstopFunction</td>
+    <td class='type'>Int</td>
+    <td class='default'>0</td>
+    <td>Enum of E-Stop repsonse (Estop.xxx)</td>
+  </tr>
+  </tbody>
+</table>
+<h3>udtError_AnalogOutput (UDT / V3.0.0)</h3>
+<table class='UDT'>
+  <thead>
+    <tr>
+      <th colspan='1' class='name'>Identifier</th>
+      <th class='type'>Data type</th>
+      <th class='default'>Default value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>OutOfRange</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Input value is outside range of engineering units</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>ConfigurationError</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Engineering units are not properly configured</td>
+  </tr>
+  </tbody>
+</table>
+<h3>typeMachineState (UDT)</h3>
+<table class='UDT'>
+  <thead>
+    <tr>
+      <th colspan='1' class='name'>Identifier</th>
+      <th class='type'>Data type</th>
+      <th class='default'>Default value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>MachineState</td>
+    <td class='type'>Int</td>
+    <td class='default'>0</td>
+    <td>The current State of the machine.</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>ActuatorsAllowed</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Global safety permissive allowing physical outputs and actuators to energize.</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>SystemRunning</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Indicates the machine is actively executing operations in automatic mode.</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>ResetDone</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Flag indicating the system reset sequence is complete and the machine is ready.</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>SequenceIdle</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Indicates no automatic sequences are currently active or running.</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>ResetSequenceComplete</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Confirmation that all individual sub-systems have finished their reset routines.</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>FeedInPalletDone</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Flag indicating a new pallet has been successfully fed into the staging/load position.</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>IdleUnloadingLoading</td>
+    <td class='type'>String</td>
+    <td class='default'>'Idle'</td>
+    <td>Idle/Unloading/Loading</td>
+  </tr>
+  </tbody>
+</table>
+<h3>typeWarehouseRack (UDT)</h3>
+<table class='UDT'>
+  <thead>
+    <tr>
+      <th colspan='1' class='name'>Identifier</th>
+      <th class='type'>Data type</th>
+      <th class='default'>Default value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>AllStorageSpots</td>
+    <td class='type'>Array[1..9, 1..6] of typeShelfSpot</td>
+    <td class='default'>---</td>
+    <td>The storage spots of this warehouse racks and their data</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>TotalSpots</td>
+    <td class='type'>Int</td>
+    <td class='default'>54</td>
+    <td>Total amount of storage spots</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>AvailableSpots</td>
+    <td class='type'>Int</td>
+    <td class='default'>54</td>
+    <td>Amount of available/empty storage spots</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>TotalGreenStored</td>
+    <td class='type'>Int</td>
+    <td class='default'>0</td>
+    <td>Totalt amount of starage spots occupied by a green item</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>TotalBlueStored</td>
+    <td class='type'>Int</td>
+    <td class='default'>0</td>
+    <td>Totalt amount of starage spots occupied by a blue item</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>TotalBlackStored</td>
+    <td class='type'>Int</td>
+    <td class='default'>0</td>
+    <td>Totalt amount of starage spots occupied by a black item</td>
+  </tr>
+  </tbody>
+</table>
+<h3>typeShelfSpot (UDT)</h3>
+<table class='UDT'>
+  <thead>
+    <tr>
+      <th colspan='1' class='name'>Identifier</th>
+      <th class='type'>Data type</th>
+      <th class='default'>Default value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>Occupied</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Reserved by crane for action/occupied.. (is this redundant now?)</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>ItemType</td>
+    <td class='type'>Int</td>
+    <td class='default'>0</td>
+    <td>Holds a reference to the type of the stored itm 0=none,1=Blue,4=Green,7=Black</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>Status</td>
+    <td class='type'>Int</td>
+    <td class='default'>0</td>
+    <td>0=Empty, 1= Full, 2=Reservered for action, 3=Faulty/blocked</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>Position</td>
+    <td class='type'>typePosition</td>
+    <td class='default'>---</td>
+    <td></td>
+  </tr>
+  </tbody>
+</table>
+<h3>typeMainInput (UDT)</h3>
+<table class='UDT'>
+  <thead>
+    <tr>
+      <th colspan='1' class='name'>Identifier</th>
+      <th class='type'>Data type</th>
+      <th class='default'>Default value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>VisionSensor</td>
+    <td class='type'>Int</td>
+    <td class='default'>0</td>
+    <td>Reads the QR code on items</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>StartButton</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Input from the physical Start pushbutton.</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>ResetButton</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Input from the physical Reset pushbutton.</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>StopButton</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Input from the physical Stop pushbutton.</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>UnloadModeToggleButton</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Switch input to toggle the machine between Load and Unload modes.</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>EmergencyStopButton</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Input from the Emergency Stop safety circuit.</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>PartAtEntry</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Photoelectric sensor indicating a pallet is present at the entry conveyor.</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>PartAtLoad</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Photoelectric sensor indicating a pallet is present at the loading station.</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>PartAtUnload</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Photoelectric sensor indicating a pallet is present at the unloading station.</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>PartAtExit</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Photoelectric sensor indicating a pallet is present at the exit conveyor.</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>CraneAtEntry</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Proximity sensor indicating the crane is positioned at the entry station.</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>CraneAtExit</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Proximity sensor indicating the crane is positioned at the exit station.</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>CraneAtMiddle</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Proximity sensor indicating the crane is in the middle transit position.</td>
+  </tr>
+  </tbody>
+</table>
+<h3>typeMainOutput (UDT)</h3>
+<table class='UDT'>
+  <thead>
+    <tr>
+      <th colspan='2' class='name'>Identifier</th>
+      <th class='type'>Data type</th>
+      <th class='default'>Default value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td colspan ='2' style='width: 125px;'>LampStartGreen</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Output to illuminate the green indicator on the Start button.</td>
+  </tr>
+  <tr>
+    <td colspan ='2' style='width: 125px;'>LampResetBlue</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Output to illuminate the blue indicator on the Reset button.</td>
+  </tr>
+  <tr>
+    <td colspan ='2' style='width: 125px;'>LampStopRed</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Output to illuminate the red indicator on the Stop button.</td>
+  </tr>
+  <tr>
+    <td colspan ='2' style='width: 125px;'>LampUnloadBrown</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Output to illuminate the Unload mode indicator lamp.</td>
+  </tr>
+  <tr>
+    <td colspan ='2' style='width: 125px;'>TowerGreen</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Output to the green light on the signal tower (running/healthy state).</td>
+  </tr>
+  <tr>
+    <td colspan ='2' style='width: 125px;'>TowerYellow</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Output to the yellow light on the signal tower (warning/resetting state).</td>
+  </tr>
+  <tr>
+    <td colspan ='2' style='width: 125px;'>TowerRed</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Output to the red light on the signal tower (error/stopped state).</td>
+  </tr>
+  <tr>
+    <td colspan ='2' style='width: 125px;'>ReqToFeedNewPalletByAuto</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Automatic sequence request to feed a new pallet into the system.</td>
+  </tr>
+  <tr>
+    <td colspan ='2' style='width: 125px;' class='hasChilds'>ReqToRunConveyorByBlock</td>
+    <td class='type'>Struct</td>
+    <td class='default'>---</td>
+    <td>Sequence telling conveyer to run</td>
+  </tr>
+  <tr>
+    <td class='emptyCell'>
+    <td colspan ='1' style='width: 125px;'>ReqEntryOn</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Internal request to run the entry conveyor motor.</td>
+  </tr>
+  <tr>
+    <td class='emptyCell'>
+    <td colspan ='1' style='width: 125px;'>ReqUnloadingOnByReset</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Internal request by MachineState: Auto to run the unload conveyor</td>
+  </tr>
+  <tr>
+    <td class='emptyCell'>
+    <td colspan ='1' style='width: 125px;'>ReqUnloadingOnByAuto</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Internal request by MachineState: Reset to run the unload conveyor</td>
+  </tr>
+  <tr>
+    <td class='emptyCell'>
+    <td colspan ='1' style='width: 125px;'>ReqLoadingOn</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Internal request to run the loading conveyor motor.</td>
+  </tr>
+  <tr>
+    <td class='emptyCell'>
+    <td colspan ='1' style='width: 125px;'>ReqUnloadingOn</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Internal request to run the unloading conveyor motor.</td>
+  </tr>
+  <tr>
+    <td class='emptyCell'>
+    <td colspan ='1' style='width: 125px;'>ReqUnloadingOff</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Internal request to halt the unloading conveyor motor.</td>
+  </tr>
+  <tr>
+    <td colspan ='2' style='width: 125px;'>ReqToFeedNewPalletByJog</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Manual/Jog mode request to feed a new pallet into the system.</td>
+  </tr>
+  <tr>
+    <td colspan ='2' style='width: 125px;'>ReqEmitterByAuto</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Automatic sequence request to trigger the Factory I/O pallet emitter.</td>
+  </tr>
+  <tr>
+    <td colspan ='2' style='width: 125px;'>ReqEmitterOffByReset</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Reset sequence request to turn off the pallet emitter.</td>
+  </tr>
+  <tr>
+    <td colspan ='2' style='width: 125px;'>ReqEmitterByJog</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Manual/Jog mode request to trigger the pallet emitter.</td>
+  </tr>
+  </tbody>
+</table>
+<h2>Functional description</h2>
+<h3 id="description">Description</h3>
+<p>Manages the complete state machine sequence for unloading a pallet from the warehouse rack. Controlled by the <code>ModeAuto</code> or <code>OrderManager</code> block. It searches for an occupied spot matching the requested type, physically moves the crane and forks to retrieve the pallet, transports it to the exit conveyor, waits for it to clear, and updates the warehouse memory upon successful completion.</p>
+<h3 id="interface-specifications">Interface Specifications</h3>
+<ul>
+<li><strong>xOkayToStartNewCycle</strong>: Boolean input authorizing the sequence to start a new unload cycle.</li>
+<li><strong>iForcedUnloadType</strong>: Integer input (0 = Normal Unload, 1-3 = Specific Order Mode Unload) passed to <code>FindRackSpot</code>.</li>
+<li><strong>xIdle</strong>: Boolean output indicating the sequence is resting at idle state (Step 0).</li>
+<li><strong>ioCrane</strong>: In/Out reference to the crane controls, containing physical speeds and targets.</li>
+<li><strong>ioState</strong>: In/Out reference to the coordinator DB tracking machine states.</li>
+<li><strong>ioRack</strong>: In/Out reference to the inventory tracking memory block.</li>
+<li><strong>ioInput</strong>: In/Out reference to the physical cabinet buttons and sensors.</li>
+<li><strong>ioOutput</strong>: In/Out reference to the physical cabinet outputs, specifically used for SPOW control of the unloading conveyor.</li>
+</ul>
+<h3 id="safety-interlocks">Safety Interlocks</h3>
+<ul>
+<li>The sequence automatically aborts and resets to <code>IDLE</code> if the machine leaves <code>MachineStateAuto</code> or <code>MachineStateStopping</code>.</li>
+<li>A built-in fork manager instance (<code>instForkManagerUnload</code>) monitors fork movement timeouts; if a jam occurs, the sequence enters <code>ST_FAULT</code> (Step 999) and freezes all movement.</li>
+<li>An 8-second watchdog timer (<code>instTimerUnload</code>) clears the conveyor if the exit sensor fails.</li>
+</ul>
+
+<h2>Referenced Objects</h2>
+<table class='ReferencedObjects'>
+	<thead>
+		<tr>
+			<th>Functions</th>
+			<th>Data Types</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>				"ForkManager" (SystemFB)			</td>
+			<td>				typeCrane (UDT)			</td>
+		</tr>
+		<tr>
+			<td>				"typeMachineState" (SystemFB)			</td>
+			<td>				typeMachineState (UDT)			</td>
+		</tr>
+		<tr>
+			<td>				"typeMainInput" (SystemFB)			</td>
+			<td>				typeMainInput (UDT)			</td>
+		</tr>
+		<tr>
+			<td>				"typeWarehouseRack" (SystemFB)			</td>
+			<td>				typeMainOutput (UDT)			</td>
+		</tr>
+		<tr>
+			<td>				CraneAtTarget (FC)			</td>
+			<td>				typeWarehouseRack (UDT)			</td>
+		</tr>
+		<tr>
+			<td>				FindRackSpot (FC)			</td>
+			<td>			</td>		</tr>
+		<tr>
+			<td>				ForkManager (FB)			</td>
+			<td>			</td>		</tr>
+		<tr>
+			<td>				SetCranePosition (FC)			</td>
+			<td>			</td>		</tr>
+		<tr>
+			<td>				TON_TIME (SystemFB / V1.0)			</td>
+			<td>			</td>		</tr>
+		<tr>
+			<td>				UpdateRackInfo (FC)			</td>
+			<td>			</td>		</tr>
+	</tbody>
+</table>
+<h2>Change log</h2>
+<table class='ChangeLog'><thead><tr><th colspan='2'>Version & Date</th><th>Change description</th></tr></thead><tbody>
+<tr class='LogEntryStart'><td></td><td>1.0.0</td><td>Daniel vdB</td></tr>
+<tr><td></td><td>30.05.2026</td><td>Initial release</td></tr>
+</tbody></table>
+<hr>
+<p class='footer'>
+LAGER_Daniel_vdB_2026<br>
+<span>Date: 05/2026</span>
+<span>Version: V1.0.0</span>
+<span>Generated with TIA Portal Add-In
+<a href='https://support.industry.siemens.com/cs/ww/en/view/109809007' target='_blank'>Code2Docu</a>
+</span>
+<span> </span>
+</p>
+</body></html>

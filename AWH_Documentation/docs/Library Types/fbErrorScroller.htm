@@ -1,0 +1,254 @@
+﻿<!DOCTYPE html><html lang='en-US'>
+<head>
+<script src='../../../Code2Docu/katex/katex.min.js'></script>
+<script src='../../../Code2Docu/katex/katexStartUp.js'></script>
+<link rel='stylesheet' href='../../../Code2Docu/katex/katex.min.css' />
+<!--[if lt IE 9]><script src='../../../Code2Docu/katex/html5shiv-printshiv-3.7.3.min.js'></script><![endif]-->
+<link rel='stylesheet' href='../../../Code2Docu/highlightJS/scl.css'>
+<script src='../../../Code2Docu/highlightJS/highlight.min.js'></script>
+<script src='../../../Code2Docu/highlightJS/scl.js'></script>
+<script src='../../../Code2Docu/Code2DocuScript.js'></script>
+<script src='../../../Code2Docu/highlightJS/highlight.load.js'></script>
+<link rel='stylesheet' href='../../../Code2Docu/style.css'>
+<link rel='stylesheet' href='../../../Code2Docu/styleCustomized.css'>
+<meta http-equiv='Content-type' content='text/html;charset=UTF-8'>
+<title>fbErrorScroller (FB / 3.0.0)</title>
+</head>
+<body>
+ <div class="containerFluid"> 
+ <h1>fbErrorScroller (FB / 3.0.0)</h1>
+<div class='langSelectionBox'>
+<a href='../../en-US/Folders/Program blocks.htm' target='_self'>Overview</a> 
+</div></div><hr>
+<span class='author'>Author: DMC</span>
+<h2>Interface description</h2>
+<h3>Block interface</h3>
+<table class='block'><thead><tr><th colspan='2'> </th><th colspan='5'>fbErrorScroller (FB)</th><th colspan='2'> </th></tr></thead><tbody>
+<tr class='in out'><td rowspan='2'>Bool</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>bInError01</td><td rowspan='2'>&nbsp;</td><td rowspan='2'>bOutErrorExists</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>Bool</td></tr>
+<tr class='in out interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in out'><td rowspan='2'>Bool</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>bInError02</td><td rowspan='2'>&nbsp;</td><td rowspan='2'>iOutScrollingErrorNumber</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>Int</td></tr>
+<tr class='in out interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in'><td rowspan='2'>Bool</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>bInError03</td><td rowspan='2'>&nbsp;</td><td rowspan='2'></td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'></td></tr>
+<tr class='in interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in'><td rowspan='2'>Bool</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>bInError04</td><td rowspan='2'>&nbsp;</td><td rowspan='2'></td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'></td></tr>
+<tr class='in interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in'><td rowspan='2'>Bool</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>bInError05</td><td rowspan='2'>&nbsp;</td><td rowspan='2'></td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'></td></tr>
+<tr class='in interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in'><td rowspan='2'>Bool</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>bInError06</td><td rowspan='2'>&nbsp;</td><td rowspan='2'></td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'></td></tr>
+<tr class='in interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in'><td rowspan='2'>Bool</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>bInError07</td><td rowspan='2'>&nbsp;</td><td rowspan='2'></td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'></td></tr>
+<tr class='in interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in'><td rowspan='2'>Bool</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>bInError08</td><td rowspan='2'>&nbsp;</td><td rowspan='2'></td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'></td></tr>
+<tr class='in interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in'><td rowspan='2'>Bool</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>bInError09</td><td rowspan='2'>&nbsp;</td><td rowspan='2'></td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'></td></tr>
+<tr class='in interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in'><td rowspan='2'>Bool</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>bInError10</td><td rowspan='2'>&nbsp;</td><td rowspan='2'></td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'></td></tr>
+<tr class='in interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in'><td rowspan='2'>Bool</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>bInError11</td><td rowspan='2'>&nbsp;</td><td rowspan='2'></td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'></td></tr>
+<tr class='in interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in'><td rowspan='2'>Bool</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>bInError12</td><td rowspan='2'>&nbsp;</td><td rowspan='2'></td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'></td></tr>
+<tr class='in interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in'><td rowspan='2'>Bool</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>bInError13</td><td rowspan='2'>&nbsp;</td><td rowspan='2'></td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'></td></tr>
+<tr class='in interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in'><td rowspan='2'>Bool</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>bInError14</td><td rowspan='2'>&nbsp;</td><td rowspan='2'></td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'></td></tr>
+<tr class='in interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in'><td rowspan='2'>Bool</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>bInError15</td><td rowspan='2'>&nbsp;</td><td rowspan='2'></td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'></td></tr>
+<tr class='in interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in'><td rowspan='2'>Bool</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>bInError16</td><td rowspan='2'>&nbsp;</td><td rowspan='2'></td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'></td></tr>
+<tr class='in interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in'><td rowspan='2'>Bool</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>bInError17</td><td rowspan='2'>&nbsp;</td><td rowspan='2'></td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'></td></tr>
+<tr class='in interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in'><td rowspan='2'>Bool</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>bInError18</td><td rowspan='2'>&nbsp;</td><td rowspan='2'></td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'></td></tr>
+<tr class='in interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in'><td rowspan='2'>Bool</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>bInError19</td><td rowspan='2'>&nbsp;</td><td rowspan='2'></td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'></td></tr>
+<tr class='in interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in'><td rowspan='2'>Bool</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>bInError20</td><td rowspan='2'>&nbsp;</td><td rowspan='2'></td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'></td></tr>
+<tr class='in interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in'><td rowspan='2'>Bool</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>bInError21</td><td rowspan='2'>&nbsp;</td><td rowspan='2'></td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'></td></tr>
+<tr class='in interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in'><td rowspan='2'>Bool</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>bInError22</td><td rowspan='2'>&nbsp;</td><td rowspan='2'></td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'></td></tr>
+<tr class='in interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in'><td rowspan='2'>Bool</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>bInError23</td><td rowspan='2'>&nbsp;</td><td rowspan='2'></td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'></td></tr>
+<tr class='in interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in'><td rowspan='2'>Bool</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>bInError24</td><td rowspan='2'>&nbsp;</td><td rowspan='2'></td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'></td></tr>
+<tr class='in interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in'><td rowspan='2'>Bool</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>bInError25</td><td rowspan='2'>&nbsp;</td><td rowspan='2'></td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'></td></tr>
+<tr class='in interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in'><td rowspan='2'>Bool</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>bInError26</td><td rowspan='2'>&nbsp;</td><td rowspan='2'></td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'></td></tr>
+<tr class='in interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in'><td rowspan='2'>Bool</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>bInError27</td><td rowspan='2'>&nbsp;</td><td rowspan='2'></td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'></td></tr>
+<tr class='in interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in'><td rowspan='2'>Bool</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>bInError28</td><td rowspan='2'>&nbsp;</td><td rowspan='2'></td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'></td></tr>
+<tr class='in interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in'><td rowspan='2'>Bool</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>bInError29</td><td rowspan='2'>&nbsp;</td><td rowspan='2'></td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'></td></tr>
+<tr class='in interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in'><td rowspan='2'>Bool</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>bInError30</td><td rowspan='2'>&nbsp;</td><td rowspan='2'></td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'></td></tr>
+<tr class='in interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+</tbody><tfoot><tr><td colspan='2'>&nbsp;</td><td colspan='5'>&nbsp;</td><td colspan='2'>&nbsp;</td></tr></tfoot></table>
+<h3>Input parameter</h3>
+<table class='BlockInterface'><thead><tr><th class='name'>Identifier</th><th class='type'>Data type</th>
+<th class='default'>Default value</th>
+<th class='retain'>Retain</th>
+<th>Description</th></tr></thead><tbody>
+<tr><td>bInError01</td><td>Bool</td>
+<td>FALSE</td>
+<td class='retain'>O</td>
+<td>Error 1 In Error Array</td></tr>
+<tr><td>bInError02</td><td>Bool</td>
+<td>FALSE</td>
+<td class='retain'>O</td>
+<td>Error 2 In Error Array</td></tr>
+<tr><td>bInError03</td><td>Bool</td>
+<td>FALSE</td>
+<td class='retain'>O</td>
+<td>Error 3 In Error Array</td></tr>
+<tr><td>bInError04</td><td>Bool</td>
+<td>FALSE</td>
+<td class='retain'>O</td>
+<td>Error 4 In Error Array</td></tr>
+<tr><td>bInError05</td><td>Bool</td>
+<td>FALSE</td>
+<td class='retain'>O</td>
+<td>Error 5 In Error Array</td></tr>
+<tr><td>bInError06</td><td>Bool</td>
+<td>FALSE</td>
+<td class='retain'>O</td>
+<td>Error 6 In Error Array</td></tr>
+<tr><td>bInError07</td><td>Bool</td>
+<td>FALSE</td>
+<td class='retain'>O</td>
+<td>Error 7 In Error Array</td></tr>
+<tr><td>bInError08</td><td>Bool</td>
+<td>FALSE</td>
+<td class='retain'>O</td>
+<td>Error 8 In Error Array</td></tr>
+<tr><td>bInError09</td><td>Bool</td>
+<td>FALSE</td>
+<td class='retain'>O</td>
+<td>Error 9 In Error Array</td></tr>
+<tr><td>bInError10</td><td>Bool</td>
+<td>FALSE</td>
+<td class='retain'>O</td>
+<td>Error 10 In Error Array</td></tr>
+<tr><td>bInError11</td><td>Bool</td>
+<td>FALSE</td>
+<td class='retain'>O</td>
+<td>Error 11 In Error Array</td></tr>
+<tr><td>bInError12</td><td>Bool</td>
+<td>FALSE</td>
+<td class='retain'>O</td>
+<td>Error 12 In Error Array</td></tr>
+<tr><td>bInError13</td><td>Bool</td>
+<td>FALSE</td>
+<td class='retain'>O</td>
+<td>Error 13 In Error Array</td></tr>
+<tr><td>bInError14</td><td>Bool</td>
+<td>FALSE</td>
+<td class='retain'>O</td>
+<td>Error 14 In Error Array</td></tr>
+<tr><td>bInError15</td><td>Bool</td>
+<td>FALSE</td>
+<td class='retain'>O</td>
+<td>Error 15 In Error Array</td></tr>
+<tr><td>bInError16</td><td>Bool</td>
+<td>FALSE</td>
+<td class='retain'>O</td>
+<td>Error 16 In Error Array</td></tr>
+<tr><td>bInError17</td><td>Bool</td>
+<td>FALSE</td>
+<td class='retain'>O</td>
+<td>Error 17 In Error Array</td></tr>
+<tr><td>bInError18</td><td>Bool</td>
+<td>FALSE</td>
+<td class='retain'>O</td>
+<td>Error 18 In Error Array</td></tr>
+<tr><td>bInError19</td><td>Bool</td>
+<td>FALSE</td>
+<td class='retain'>O</td>
+<td>Error 19 In Error Array</td></tr>
+<tr><td>bInError20</td><td>Bool</td>
+<td>FALSE</td>
+<td class='retain'>O</td>
+<td>Error 20 In Error Array</td></tr>
+<tr><td>bInError21</td><td>Bool</td>
+<td>FALSE</td>
+<td class='retain'>O</td>
+<td>Error 21 In Error Array</td></tr>
+<tr><td>bInError22</td><td>Bool</td>
+<td>FALSE</td>
+<td class='retain'>O</td>
+<td>Error 22 In Error Array</td></tr>
+<tr><td>bInError23</td><td>Bool</td>
+<td>FALSE</td>
+<td class='retain'>O</td>
+<td>Error 23 In Error Array</td></tr>
+<tr><td>bInError24</td><td>Bool</td>
+<td>FALSE</td>
+<td class='retain'>O</td>
+<td>Error 24 In Error Array</td></tr>
+<tr><td>bInError25</td><td>Bool</td>
+<td>FALSE</td>
+<td class='retain'>O</td>
+<td>Error 25 In Error Array</td></tr>
+<tr><td>bInError26</td><td>Bool</td>
+<td>FALSE</td>
+<td class='retain'>O</td>
+<td>Error 26 In Error Array</td></tr>
+<tr><td>bInError27</td><td>Bool</td>
+<td>FALSE</td>
+<td class='retain'>O</td>
+<td>Error 27 In Error Array</td></tr>
+<tr><td>bInError28</td><td>Bool</td>
+<td>FALSE</td>
+<td class='retain'>O</td>
+<td>Error 28 In Error Array</td></tr>
+<tr><td>bInError29</td><td>Bool</td>
+<td>FALSE</td>
+<td class='retain'>O</td>
+<td>Error 29 In Error Array</td></tr>
+<tr><td>bInError30</td><td>Bool</td>
+<td>FALSE</td>
+<td class='retain'>O</td>
+<td>Error 30 In Error Array</td></tr>
+</tbody></table>
+<h3>Output parameter</h3>
+<table class='BlockInterface'><thead><tr><th class='name'>Identifier</th><th class='type'>Data type</th>
+<th class='retain'>Retain</th>
+<th>Description</th></tr></thead><tbody>
+<tr><td>bOutErrorExists</td><td>Bool</td>
+<td class='retain'>O</td>
+<td>An Error Exists</td></tr>
+<tr><td>iOutScrollingErrorNumber</td><td>Int</td>
+<td class='retain'>O</td>
+<td>Current Index when scrolling through errors</td></tr>
+</tbody></table>
+<h3>Retain static parameter</h3>
+<table class='BlockInterface'><thead><tr><th class='name'>Identifier</th><th class='type'>Data type</th>
+<th class='retain'>Retain</th>
+<th>Description</th></tr></thead><tbody>
+<tr><td>abErrors</td><td>Array[#ciIndexLow..#ciIndexHigh] of Bool</td><td class='retain'>O</td><td></td></tr>
+</tbody></table>
+<h2>Referenced Objects</h2>
+<table class='ReferencedObjects'>
+	<thead>
+		<tr>
+			<th>Data Types</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>				TON_TIME (SystemUDT / V1.0)			</td>
+		</tr>
+	</tbody>
+</table>
+<hr>
+<p class='footer'>
+LAGER_Daniel_vdB_2026<br>
+<span>Date: 05/2026</span>
+<span>Version: V1.0.0</span>
+<span>Generated with TIA Portal Add-In
+<a href='https://support.industry.siemens.com/cs/ww/en/view/109809007' target='_blank'>Code2Docu</a>
+</span>
+<span> </span>
+</p>
+</body></html>

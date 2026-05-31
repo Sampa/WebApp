@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html><html lang='en-US'>
+<head>
+<script src='../../../Code2Docu/katex/katex.min.js'></script>
+<script src='../../../Code2Docu/katex/katexStartUp.js'></script>
+<link rel='stylesheet' href='../../../Code2Docu/katex/katex.min.css' />
+<!--[if lt IE 9]><script src='../../../Code2Docu/katex/html5shiv-printshiv-3.7.3.min.js'></script><![endif]-->
+<link rel='stylesheet' href='../../../Code2Docu/highlightJS/scl.css'>
+<script src='../../../Code2Docu/highlightJS/highlight.min.js'></script>
+<script src='../../../Code2Docu/highlightJS/scl.js'></script>
+<script src='../../../Code2Docu/Code2DocuScript.js'></script>
+<script src='../../../Code2Docu/highlightJS/highlight.load.js'></script>
+<link rel='stylesheet' href='../../../Code2Docu/style.css'>
+<link rel='stylesheet' href='../../../Code2Docu/styleCustomized.css'>
+<meta http-equiv='Content-type' content='text/html;charset=UTF-8'>
+<title>fcSetHMIStatusGeneric (FC / 3.0.1)</title>
+</head>
+<body>
+ <div class="containerFluid"> 
+ <h1>fcSetHMIStatusGeneric (FC / 3.0.1)</h1>
+<div class='langSelectionBox'>
+<a href='../../en-US/Folders/Program blocks.htm' target='_self'>Overview</a> 
+</div></div><hr>
+<h2>Short description</h2>
+<p>Wrapper function for setting the HMI status of a device.</p>
+<p>It will display in order of priority, based on input, where Status1 &gt; Status 2 &gt; Status 3 &gt; Status 4 &gt; Status 5 &gt; Status 6.</p>
+
+<h2>Interface description</h2>
+<h3>Block interface</h3>
+<table class='block'><thead><tr><th colspan='2'> </th><th colspan='5'>fcSetHMIStatusGeneric (FC)</th><th colspan='2'> </th></tr></thead><tbody>
+<tr class='in return'><td rowspan='2'>Bool</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>bInStatus1</td><td rowspan='2'>&nbsp;</td><td rowspan='2'>Ret_Val</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>Void</td></tr>
+<tr class='in return interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in out'><td rowspan='2'>Bool</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>bInStatus2</td><td rowspan='2'>&nbsp;</td><td rowspan='2'>iOutStatus</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>Int</td></tr>
+<tr class='in out interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in'><td rowspan='2'>Bool</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>bInStatus3</td><td rowspan='2'>&nbsp;</td><td rowspan='2'></td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'></td></tr>
+<tr class='in interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in'><td rowspan='2'>Bool</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>bInStatus4</td><td rowspan='2'>&nbsp;</td><td rowspan='2'></td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'></td></tr>
+<tr class='in interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in'><td rowspan='2'>Bool</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>bInStatus5</td><td rowspan='2'>&nbsp;</td><td rowspan='2'></td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'></td></tr>
+<tr class='in interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in'><td rowspan='2'>Bool</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>bInStatus6</td><td rowspan='2'>&nbsp;</td><td rowspan='2'></td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'></td></tr>
+<tr class='in interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+</tbody><tfoot><tr><td colspan='2'>&nbsp;</td><td colspan='5'>&nbsp;</td><td colspan='2'>&nbsp;</td></tr></tfoot></table>
+<h3>Input parameter</h3>
+<table class='BlockInterface'><thead><tr><th class='name'>Identifier</th><th class='type'>Data type</th>
+<th>Description</th></tr></thead><tbody>
+<tr><td>bInStatus1</td><td>Bool</td>
+<td></td></tr>
+<tr><td>bInStatus2</td><td>Bool</td>
+<td></td></tr>
+<tr><td>bInStatus3</td><td>Bool</td>
+<td></td></tr>
+<tr><td>bInStatus4</td><td>Bool</td>
+<td></td></tr>
+<tr><td>bInStatus5</td><td>Bool</td>
+<td></td></tr>
+<tr><td>bInStatus6</td><td>Bool</td>
+<td></td></tr>
+</tbody></table>
+<h3>Output parameter</h3>
+<table class='BlockInterface'><thead><tr><th class='name'>Identifier</th><th class='type'>Data type</th>
+<th>Description</th></tr></thead><tbody>
+<tr class='return'><td>Ret_Val</td><td>Void</td>
+<td>Void - Function has no return value</td></tr>
+<tr><td>iOutStatus</td><td>Int</td>
+<td></td></tr>
+</tbody></table>
+<hr>
+<p class='footer'>
+LAGER_Daniel_vdB_2026<br>
+<span>Date: 05/2026</span>
+<span>Version: V1.0.0</span>
+<span>Generated with TIA Portal Add-In
+<a href='https://support.industry.siemens.com/cs/ww/en/view/109809007' target='_blank'>Code2Docu</a>
+</span>
+<span> </span>
+</p>
+</body></html>

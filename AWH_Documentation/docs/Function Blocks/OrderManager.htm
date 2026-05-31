@@ -1,0 +1,251 @@
+﻿<!DOCTYPE html><html lang='en-US'>
+<head>
+<script src='../../../Code2Docu/katex/katex.min.js'></script>
+<script src='../../../Code2Docu/katex/katexStartUp.js'></script>
+<link rel='stylesheet' href='../../../Code2Docu/katex/katex.min.css' />
+<!--[if lt IE 9]><script src='../../../Code2Docu/katex/html5shiv-printshiv-3.7.3.min.js'></script><![endif]-->
+<link rel='stylesheet' href='../../../Code2Docu/highlightJS/scl.css'>
+<script src='../../../Code2Docu/highlightJS/highlight.min.js'></script>
+<script src='../../../Code2Docu/highlightJS/scl.js'></script>
+<script src='../../../Code2Docu/Code2DocuScript.js'></script>
+<script src='../../../Code2Docu/highlightJS/highlight.load.js'></script>
+<link rel='stylesheet' href='../../../Code2Docu/style.css'>
+<link rel='stylesheet' href='../../../Code2Docu/styleCustomized.css'>
+<meta http-equiv='Content-type' content='text/html;charset=UTF-8'>
+<title>OrderManager (FB)</title>
+</head>
+<body>
+ <div class="containerFluid"> 
+ <h1>OrderManager (FB)</h1>
+<div class='langSelectionBox'>
+<a href='../../en-US/Folders/Program blocks.htm' target='_self'>Overview</a> 
+</div></div><hr>
+<h2>Interface description</h2>
+<h3>Block interface</h3>
+<table class='block'><thead><tr><th colspan='2'> </th><th colspan='5'>OrderManager (FB)</th><th colspan='2'> </th></tr></thead><tbody>
+<tr class='in out'><td rowspan='2'>Bool</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>xOrderRequest</td><td rowspan='2'>&nbsp;</td><td rowspan='2'>xOrderOverrideActive</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>Bool</td></tr>
+<tr class='in out interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in out'><td rowspan='2'>Int</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>iRequestedType</td><td rowspan='2'>&nbsp;</td><td rowspan='2'>iForcedUnloadType</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>Int</td></tr>
+<tr class='in out interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in out'><td rowspan='2'>Int</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>iRequestedQty</td><td rowspan='2'>&nbsp;</td><td rowspan='2'>xOrderError</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>Bool</td></tr>
+<tr class='in out interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in'><td rowspan='2'>Bool</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>xSequenceIdle</td><td rowspan='2'>&nbsp;</td><td rowspan='2'></td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'></td></tr>
+<tr class='in interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in'><td rowspan='2'>Bool</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>xItemUnloadedPulse</td><td rowspan='2'>&nbsp;</td><td rowspan='2'></td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'></td></tr>
+<tr class='in interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='in'><td rowspan='2'>Int</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>iMachineState</td><td rowspan='2'>&nbsp;</td><td rowspan='2'></td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'></td></tr>
+<tr class='in interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class='inOut'><td rowspan='2'>typeWarehouseRack</td><td>&nbsp;</td><td>&nbsp;</td><td colspan='3'>ioWarehouseData</td><td>&nbsp;</td><td>&nbsp;</td><td rowspan='2'>typeWarehouseRack</td></tr>
+<tr class='inOut interface'><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+</tbody><tfoot><tr><td colspan='2'>&nbsp;</td><td colspan='5'>&nbsp;</td><td colspan='2'>&nbsp;</td></tr></tfoot></table>
+<h3>Input parameter</h3>
+<table class='BlockInterface'><thead><tr><th class='name'>Identifier</th><th class='type'>Data type</th>
+<th class='default'>Default value</th>
+<th>Description</th></tr></thead><tbody>
+<tr><td>xOrderRequest</td><td>Bool</td>
+<td>FALSE</td>
+<td>Rising edge triggers order evaluation</td></tr>
+<tr><td>iRequestedType</td><td>Int</td>
+<td>0</td>
+<td>1 = Blue, 4 = Green, 7 = Black (Matches Factory IO)</td></tr>
+<tr><td>iRequestedQty</td><td>Int</td>
+<td>0</td>
+<td>Number of items requested by SCADA</td></tr>
+<tr><td>xSequenceIdle</td><td>Bool</td>
+<td>FALSE</td>
+<td>Sourced from typeMachineState.SequenceIdle</td></tr>
+<tr><td>xItemUnloadedPulse</td><td>Bool</td>
+<td>FALSE</td>
+<td>One-shot pulse from Exit Conveyor when pallet leaves</td></tr>
+<tr><td>iMachineState</td><td>Int</td>
+<td>0</td>
+<td>Current system state pointer for safety aborts</td></tr>
+</tbody></table>
+<h3>Output parameter</h3>
+<table class='BlockInterface'><thead><tr><th class='name'>Identifier</th><th class='type'>Data type</th>
+<th>Description</th></tr></thead><tbody>
+<tr><td>xOrderOverrideActive</td><td>Bool</td>
+<td>Commands main sequence to switch to UNLOAD mode</td></tr>
+<tr><td>iForcedUnloadType</td><td>Int</td>
+<td>Passes the requested type to the array search algorithm</td></tr>
+<tr><td>xOrderError</td><td>Bool</td>
+<td>Triggers SCADA alert if order is invalid or timed out</td></tr>
+</tbody></table>
+<h3>In/Out parameter</h3>
+<table class='BlockInterface'><thead><tr><th class='name'>Identifier</th><th class='type'>Data type</th>
+<th>Description</th></tr></thead><tbody>
+<tr><td>ioWarehouseData</td><td>typeWarehouseRack</td>
+<td>Direct reference to the warehouse memory DB</td></tr>
+</tbody></table>
+<h2>User defined datatype(s)</h2>
+<h3>typeWarehouseRack (UDT)</h3>
+<table class='UDT'>
+  <thead>
+    <tr>
+      <th colspan='1' class='name'>Identifier</th>
+      <th class='type'>Data type</th>
+      <th class='default'>Default value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>AllStorageSpots</td>
+    <td class='type'>Array[1..9, 1..6] of typeShelfSpot</td>
+    <td class='default'>---</td>
+    <td>The storage spots of this warehouse racks and their data</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>TotalSpots</td>
+    <td class='type'>Int</td>
+    <td class='default'>54</td>
+    <td>Total amount of storage spots</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>AvailableSpots</td>
+    <td class='type'>Int</td>
+    <td class='default'>54</td>
+    <td>Amount of available/empty storage spots</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>TotalGreenStored</td>
+    <td class='type'>Int</td>
+    <td class='default'>0</td>
+    <td>Totalt amount of starage spots occupied by a green item</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>TotalBlueStored</td>
+    <td class='type'>Int</td>
+    <td class='default'>0</td>
+    <td>Totalt amount of starage spots occupied by a blue item</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>TotalBlackStored</td>
+    <td class='type'>Int</td>
+    <td class='default'>0</td>
+    <td>Totalt amount of starage spots occupied by a black item</td>
+  </tr>
+  </tbody>
+</table>
+<h3>typeShelfSpot (UDT)</h3>
+<table class='UDT'>
+  <thead>
+    <tr>
+      <th colspan='1' class='name'>Identifier</th>
+      <th class='type'>Data type</th>
+      <th class='default'>Default value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>Occupied</td>
+    <td class='type'>Bool</td>
+    <td class='default'>FALSE</td>
+    <td>Reserved by crane for action/occupied.. (is this redundant now?)</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>ItemType</td>
+    <td class='type'>Int</td>
+    <td class='default'>0</td>
+    <td>Holds a reference to the type of the stored itm 0=none,1=Blue,4=Green,7=Black</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>Status</td>
+    <td class='type'>Int</td>
+    <td class='default'>0</td>
+    <td>0=Empty, 1= Full, 2=Reservered for action, 3=Faulty/blocked</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>Position</td>
+    <td class='type'>typePosition</td>
+    <td class='default'>---</td>
+    <td></td>
+  </tr>
+  </tbody>
+</table>
+<h3>typePosition (UDT)</h3>
+<table class='UDT'>
+  <thead>
+    <tr>
+      <th colspan='1' class='name'>Identifier</th>
+      <th class='type'>Data type</th>
+      <th class='default'>Default value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>X</td>
+    <td class='type'>Int</td>
+    <td class='default'>0</td>
+    <td>X coordinate (horizontal)</td>
+  </tr>
+  <tr>
+    <td colspan ='1' style='width: 125px;'>Z</td>
+    <td class='type'>Int</td>
+    <td class='default'>0</td>
+    <td>Z coordinate (vertical)</td>
+  </tr>
+  </tbody>
+</table>
+<h2>Functional description</h2>
+<h3 id="description">Description</h3>
+<p>Intercepts automatic warehouse operations when an external SCADA system requests a specific number of items of a particular color. Validates the request against available stock (<code>ioWarehouseData</code>), coordinates prioritized unloading with the main sequence, and implements a safety watchdog timer to abort and signal an error if the order execution hangs.</p>
+<h3 id="interface-specifications">Interface Specifications</h3>
+<ul>
+<li><strong>xOrderRequest</strong>: Boolean input. A rising edge triggers the evaluation of the new order.</li>
+<li><strong>iRequestedType</strong>: Integer input for item color/type (1 = Blue, 4 = Green, 7 = Black).</li>
+<li><strong>iRequestedQty</strong>: Integer input specifying the number of items requested.</li>
+<li><strong>xSequenceIdle</strong>: Boolean input indicating the main state machine is idle and can accept the order intercept.</li>
+<li><strong>xItemUnloadedPulse</strong>: Boolean input pulse from the exit conveyor when an item leaves.</li>
+<li><strong>iMachineState</strong>: Integer input pointing to the current machine state for safety aborts.</li>
+<li><strong>xOrderOverrideActive</strong>: Boolean output that commands the main sequence into UNLOAD mode.</li>
+<li><strong>iForcedUnloadType</strong>: Integer output that forces the unload algorithm to search for the requested type.</li>
+<li><strong>xOrderError</strong>: Boolean output triggering a SCADA alert for invalid orders or timeouts.</li>
+<li><strong>ioWarehouseData</strong>: In/Out reference to the warehouse rack data structure.</li>
+</ul>
+<h3 id="safety-interlocks">Safety Interlocks</h3>
+<ul>
+<li>Order is immediately aborted if <code>iMachineState</code> indicates Emergency or Stopped.</li>
+<li>Request is rejected (Error) if requested quantity exceeds available stock or is &lt;= 0.</li>
+<li>Watchdog aborts active orders taking longer than <code>ORDER_TIMEOUT_LIMIT</code> (3m).</li>
+</ul>
+
+<h2>Referenced Objects</h2>
+<table class='ReferencedObjects'>
+	<thead>
+		<tr>
+			<th>Functions</th>
+			<th>Data Types</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>				"typeWarehouseRack" (SystemFB)			</td>
+			<td>				typeWarehouseRack (UDT)			</td>
+		</tr>
+		<tr>
+			<td>				R_TRIG (SystemFB / V1.0)			</td>
+			<td>			</td>		</tr>
+		<tr>
+			<td>				TON_TIME (SystemFB / V1.0)			</td>
+			<td>			</td>		</tr>
+	</tbody>
+</table>
+<h2>Change log</h2>
+<table class='ChangeLog'><thead><tr><th colspan='2'>Version & Date</th><th>Change description</th></tr></thead><tbody>
+<tr class='LogEntryStart'><td></td><td>1.0.0</td><td>Daniel vdB</td></tr>
+<tr><td></td><td>30.05.2026</td><td>Initial release</td></tr>
+</tbody></table>
+<hr>
+<p class='footer'>
+LAGER_Daniel_vdB_2026<br>
+<span>Date: 05/2026</span>
+<span>Version: V1.0.0</span>
+<span>Generated with TIA Portal Add-In
+<a href='https://support.industry.siemens.com/cs/ww/en/view/109809007' target='_blank'>Code2Docu</a>
+</span>
+<span> </span>
+</p>
+</body></html>
